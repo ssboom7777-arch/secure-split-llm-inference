@@ -138,4 +138,4 @@ powershell -ExecutionPolicy Bypass -File .\q4-capacity-model\run.ps1
 
 ## GitHub交付
 
-提交前请查看[交付清单](docs/DELIVERY_CHECKLIST.md)。[Agent 协作全程记录](docs/transcript/codex-project-transcript.md)和[一页复盘](docs/agent-retrospective.md)已经整理完成；1分钟 Demo 视频仍需录制。仓库还需要在 GitHub 中分享给用户 `fxlin`。
+提交前请查看[交付清单](docs/DELIVERY_CHECKLIST.md)。[Demo 录屏](docs/demo/demo.mp4)、[Agent 协作全程记录](docs/transcript/codex-project-transcript.md)和[一页复盘](docs/agent-retrospective.md)已经整理完成。当前 Demo 是 8 分 39 秒完整演示版，仍建议按任务书剪辑约 1 分钟提交版。仓库还需要在 GitHub 中分享给用户 `fxlin`。

@@ -14,11 +14,12 @@
 - [x] 根README、各题README、结果数据与图表；
 - [x] 模型权重、虚拟环境、日志和缓存已排除在Git提交之外；
 - [x] Agent协作全程记录及可重复导出脚本；
-- [x] 一页Agent协作复盘。
+- [x] 一页Agent协作复盘；
+- [x] Demo录屏已放入`docs/demo/demo.mp4`。
 
 ## 提交前需要人工完成
 
-- [ ] 按`docs/demo-script.md`录制约1分钟Demo，放入`docs/demo/`或上传后在README中添加链接；
+- [ ] 当前Demo时长为8分39秒，按任务书要求剪辑为约1分钟提交版；
 - [ ] 在干净目录克隆仓库，至少执行Q1、Q2 `verify-all.ps1`、Q3主实验和Q4估算冒烟测试；
 - [ ] 检查Git提交中不存在`.safetensors`、`.gguf`、`.venv`、`wheels`和`runtime`；
 - [ ] 推送GitHub并将仓库共享给用户`fxlin`。
