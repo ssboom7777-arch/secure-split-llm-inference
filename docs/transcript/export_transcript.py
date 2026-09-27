@@ -104,23 +104,51 @@ def collect_messages(paths: list[Path]) -> list[dict[str, str]]:
     return messages
 
 
-def render(paths: list[Path], messages: list[dict[str, str]]) -> str:
+def apply_curation(
+    messages: list[dict[str, str]], config_path: Path
+) -> tuple[list[dict[str, str]], dict]:
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    cutoff = config.get("cutoff_timestamp")
+    exact = set(config.get("exclude_exact", []))
+    prefixes = tuple(config.get("exclude_prefixes", []))
+    replacements = config.get("text_replacements", {})
+    curated = []
+
+    for original in messages:
+        if cutoff and parse_timestamp(original["timestamp"]) > parse_timestamp(cutoff):
+            continue
+        if original["text"] in exact or original["text"].startswith(prefixes):
+            continue
+        message = dict(original)
+        for old, new in replacements.items():
+            message["text"] = message["text"].replace(old, new)
+        curated.append(message)
+    return curated, config
+
+
+def render(
+    paths: list[Path], messages: list[dict[str, str]], curation: dict | None = None
+) -> str:
     lines = [
-        "# Agent 协作全程记录",
+        "# Agent 协作全程记录（面试交付整理版）",
         "",
-        "> 本文件由 Codex 本地会话自动整理生成，保留用户与 Agent 的可见消息原文；",
-        "> 系统/开发者提示、内部推理、工具调用参数及原始运行日志未纳入正文。实验命令、结果和证据见项目各题目录。",
+        "> 本文件由 Codex 本地会话自动整理生成，保留与任务有关的用户和 Agent 可见消息；",
+        "> 系统/开发者提示、内部推理、工具原始日志、无关问答、误输入、重复输入和 Transcript 生成自述未纳入正文；本机绝对路径已泛化。",
+        "> 实验失败、判断修正和人工纠偏均予以保留。实验命令、结果和证据见项目各题目录。",
         "",
         "## 记录范围",
         "",
         f"- 可见消息：{len(messages)} 条；",
         f"- 用户消息：{sum(m['role'] == 'user' for m in messages)} 条；",
         f"- Agent 消息：{sum(m['role'] == 'assistant' for m in messages)} 条；",
-        "- 原始会话文件及 SHA-256：",
-        "",
     ]
-    for path in paths:
-        lines.append(f"  - `{path.name}`：`{sha256(path)}`")
+    if curation:
+        lines.append(f"- 来源：{len(paths)} 段连续 Codex 会话；")
+        lines.append(f"- 整理规则：`{curation.get('policy_name', '面试交付整理')}`。")
+    else:
+        lines.extend(["- 原始会话文件及 SHA-256：", ""])
+        for path in paths:
+            lines.append(f"  - `{path.name}`：`{sha256(path)}`")
 
     current_date = None
     for index, message in enumerate(messages, start=1):
@@ -147,6 +175,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("inputs", nargs="+", type=Path)
     parser.add_argument("-o", "--output", required=True, type=Path)
+    parser.add_argument("--curation", type=Path)
     args = parser.parse_args()
 
     paths = [path.resolve() for path in args.inputs]
@@ -155,9 +184,16 @@ def main() -> None:
         raise SystemExit(f"Missing input files: {', '.join(missing)}")
 
     messages = collect_messages(paths)
+    curation = None
+    raw_count = len(messages)
+    if args.curation:
+        messages, curation = apply_curation(messages, args.curation)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(render(paths, messages), encoding="utf-8")
-    print(f"Wrote {len(messages)} visible messages to {args.output}")
+    args.output.write_text(render(paths, messages, curation), encoding="utf-8")
+    print(
+        f"Wrote {len(messages)} visible messages to {args.output} "
+        f"({raw_count - len(messages)} excluded)"
+    )
 
 
 if __name__ == "__main__":

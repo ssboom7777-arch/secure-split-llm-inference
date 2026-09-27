@@ -1,0 +1,28 @@
+{
+  "policy_name": "删除无关内容、误输入、重复输入和 Transcript 生成自述；泛化本机路径；保留技术分歧、失败与纠偏",
+  "cutoff_timestamp": "2026-09-27T08:05:59.999Z",
+  "exclude_exact": [
+    "如果一个模型的上下文size比较小，会产生什么影响",
+    "我们先来解决Q1，我看Q1是包含了2个问题，一个是调研下这个业界的方案有哪些；二是对已有的方案进行评估。我们先看第一个问题，你帮我调研一下有哪些方案，生成一个言简意赅的报告。我理解，这个报告里面首先是先描述清楚问题；然后，要有系统性思维，首先定义什么是数据不出企业，什么样的安全问题，有哪些攻击者等等",
+    "根据题目中给出的企业内部2卡，云端8卡的提示，你认为我在当前笔记本上进行模拟实验，同时希望真正执行模型，应该怎么构造这个多任务常见",
+    "根据上述结论，构造新的验证时延",
+    "是否有必要通过请问"
+  ],
+  "exclude_prefixes": [
+    "模型的上下文 size（上下文窗口）较小，意味着它一次能“看到”的内容有限",
+    "我会使用深度调研方法来完成这份报告",
+    "该调研规范要求把检索工作交给一个专门研究代理做两轮证据搜集",
+    "我会把现有协作过程整理成可提交的Markdown Transcript",
+    "我会把本地 Codex 会话提取为可读的协作记录",
+    "Transcript 已从 4 段连续会话中生成"
+  ],
+  "text_replacements": {
+    "E:\\vscode_workspace\\AIOSforLearning\\interview-challenge": "PROJECT_ROOT",
+    "E:/vscode_workspace/AIOSforLearning/interview-challenge": "PROJECT_ROOT",
+    "E:\\vscode_workspace\\AIOSforLearning\\minimind": "WORKSPACE_ROOT\\minimind",
+    "E:/vscode_workspace/AIOSforLearning/minimind": "WORKSPACE_ROOT/minimind",
+    "E:\\vscode_workspace\\AIOSforLearning": "WORKSPACE_ROOT",
+    "E:/vscode_workspace/AIOSforLearning": "WORKSPACE_ROOT",
+    "另外，最终提交前仍需补充完整Agent对话记录和1分钟Demo视频。": "另外，最终提交前仍需补充1分钟Demo视频。"
+  }
+}
