@@ -23,6 +23,29 @@
 
 模型权重、虚拟环境、Wheel缓存和运行日志不提交Git。脚本会在首次运行时下载所需内容。
 
+## Git未包含的大文件与下载位置
+
+为避免超过GitHub单文件100 MB限制，以下内容不会上传。`git clone`后无需手工寻找文件，使用对应命令即可下载到脚本预期位置：
+
+| 未上传内容 | 本地目标位置 | 约占用空间 | 下载来源 | 准备命令 |
+|---|---|---:|---|---|
+| MiniMind-3权重 | `q2-split-inference/assets/model.safetensors` | 122 MiB | `jingyaogong/minimind-3`固定文件 | `q2-split-inference/download-model.ps1` |
+| Qwen3-1.7B BF16权重及Tokenizer | `assets/qwen3-1.7b/` | 约3.8 GiB | `Qwen/Qwen3-1.7B`固定Revision | `download-qwen3.ps1` |
+| Python虚拟环境 | `q2-split-inference/.venv/` | 约1～2 GiB | PyTorch/PyPI镜像 | `q2-split-inference/setup.ps1` |
+| Wheel下载缓存 | `q2-split-inference/wheels/` | 约400 MiB | PyTorch/PyPI镜像 | 由`setup.ps1`自动下载 |
+| 运行日志和PID | 各目录`runtime/` | 随实验变化 | 本地运行生成 | 无需下载 |
+
+MiniMind权重和Tokenizer使用SHA-256校验；Qwen3下载固定在Revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`，并按照仓库中的`assets/qwen3-1.7b.manifest.json`逐文件校验大小和SHA-256。
+
+直接准备全部模型：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\q2-split-inference\download-model.ps1
+powershell -ExecutionPolicy Bypass -File .\download-qwen3.ps1
+```
+
+Q1、Q2、Q3主实验和Q4的MiniMind校准共享同一份MiniMind权重，不需要重复下载。Qwen3只用于补充验证；不运行Qwen3实验时，可以不下载约3.8 GiB权重。
+
 ## 一条命令复现
 
 所有命令均从仓库根目录执行。

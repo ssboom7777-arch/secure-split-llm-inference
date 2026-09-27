@@ -4,6 +4,8 @@ $env:PYTHONIOENCODING = "utf-8"
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Q2 = Resolve-Path (Join-Path $Root "..\q2-split-inference")
 $Python = Join-Path $Q2 ".venv\Scripts\python.exe"
+if (-not (Test-Path -LiteralPath $Python)) { & (Join-Path $Q2 "setup.ps1") }
+if (-not (Test-Path -LiteralPath (Join-Path $Q2 "assets\model.safetensors"))) { & (Join-Path $Q2 "download-model.ps1") }
 $Weights = Resolve-Path (Join-Path $Q2 "assets\model.safetensors")
 $Tokenizer = Resolve-Path (Join-Path $Q2 "assets\tokenizer.json")
 $Runtime = Join-Path $Root "runtime\single-slot-decode-sweep"

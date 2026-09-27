@@ -9,15 +9,11 @@ from pathlib import Path
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("destination", type=Path)
-    parser.add_argument("revision")
+    parser.add_argument("manifest", type=Path)
     args = parser.parse_args()
     root = args.destination
-    required = {
-        "LICENSE", "README.md", "config.json", "generation_config.json",
-        "tokenizer.json", "tokenizer_config.json", "vocab.json", "merges.txt",
-        "model.safetensors.index.json", "model-00001-of-00002.safetensors",
-        "model-00002-of-00002.safetensors",
-    }
+    expected = json.loads(args.manifest.read_text(encoding="utf-8"))
+    required = set(expected["files"])
     missing = sorted(required - {path.name for path in root.iterdir() if path.is_file()})
     if missing:
         raise SystemExit(f"Missing Qwen3 files: {missing}")
@@ -26,17 +22,19 @@ def main() -> None:
     expected_shards = {"model-00001-of-00002.safetensors", "model-00002-of-00002.safetensors"}
     if referenced_shards != expected_shards:
         raise SystemExit(f"Unexpected shard references: {sorted(referenced_shards)}")
-    manifest = {"repo_id": "Qwen/Qwen3-1.7B", "revision": args.revision, "files": {}}
-    for path in sorted(p for p in root.iterdir() if p.is_file() and p.name != "download-manifest.json"):
+    for name, metadata in expected["files"].items():
+        path = root / name
+        if path.stat().st_size != metadata["bytes"]:
+            raise SystemExit(f"Size mismatch for {name}: {path.stat().st_size}")
         digest = hashlib.sha256()
         with path.open("rb") as handle:
             for chunk in iter(lambda: handle.read(8 * 1024 * 1024), b""):
                 digest.update(chunk)
-        manifest["files"][path.name] = {"bytes": path.stat().st_size, "sha256": digest.hexdigest()}
-    (root / "download-manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+        if digest.hexdigest() != metadata["sha256"]:
+            raise SystemExit(f"SHA-256 mismatch for {name}: {digest.hexdigest()}")
     print(f"Qwen3 snapshot ready: {root}")
-    print(f"Revision: {manifest['revision']}")
-    print(f"Files: {len(manifest['files'])}")
+    print(f"Revision: {expected['revision']}")
+    print(f"Verified files: {len(expected['files'])}")
 
 
 if __name__ == "__main__":

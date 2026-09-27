@@ -4,10 +4,9 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 $env:PYTHONIOENCODING = "utf-8"
 
 $PocRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$Weights = Join-Path $PocRoot "assets\model.safetensors"
+$Weights = Join-Path $PocRoot "..\q2-split-inference\assets\model.safetensors"
 $Tokenizer = Join-Path $PocRoot "..\q2-split-inference\assets\tokenizer.json"
 $Results = Join-Path $PocRoot "results\results.json"
-$ModelUrl = "https://hf-mirror.com/jingyaogong/minimind-3/resolve/main/model.safetensors"
 
 if (-not (Test-Path -LiteralPath $Tokenizer)) {
     & (Join-Path $PocRoot "..\q2-split-inference\download-model.ps1")
@@ -15,10 +14,8 @@ if (-not (Test-Path -LiteralPath $Tokenizer)) {
 }
 
 if (-not (Test-Path -LiteralPath $Weights)) {
-    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $Weights) | Out-Null
-    Write-Host "Downloading MiniMind-3 weights (about 122 MiB)..."
-    & curl.exe -L --fail --retry 3 -o $Weights $ModelUrl
-    if ($LASTEXITCODE -ne 0) { throw "Model download failed" }
+    & (Join-Path $PocRoot "..\q2-split-inference\download-model.ps1")
+    if ($LASTEXITCODE -ne 0) { throw "MiniMind model download failed" }
 }
 
 $PythonCommand = (Get-Command python -ErrorAction Stop).Source
