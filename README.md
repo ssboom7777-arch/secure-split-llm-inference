@@ -124,7 +124,7 @@ powershell -ExecutionPolicy Bypass -File .\q4-capacity-model\run.ps1
 ├─ q3-scheduler-poc/                 # Q3调度优化与实测
 ├─ q4-capacity-model/                # Q4容量模型与校准
 ├─ qwen3-validation/                 # Qwen3补充实验
-└─ docs/                             # 交付清单、Demo与Agent复盘
+└─ docs/                             # 交付清单、Transcript、Demo与Agent复盘
 ```
 
 ## 结果与证据口径
@@ -138,4 +138,4 @@ powershell -ExecutionPolicy Bypass -File .\q4-capacity-model\run.ps1
 
 ## GitHub交付
 
-提交前请查看[交付清单](docs/DELIVERY_CHECKLIST.md)。仓库需要分享给GitHub用户`fxlin`。Agent完整对话记录和1分钟Demo视频需要在最终提交前由作者导出/录制并放入指定目录。
+提交前请查看[交付清单](docs/DELIVERY_CHECKLIST.md)。[Agent 协作全程记录](docs/transcript/codex-project-transcript.md)和[一页复盘](docs/agent-retrospective.md)已经整理完成；1分钟 Demo 视频仍需录制。仓库还需要在 GitHub 中分享给用户 `fxlin`。
