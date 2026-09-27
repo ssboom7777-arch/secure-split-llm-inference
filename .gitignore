@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+.venv*/
+venv/
+
+# Downloaded dependencies and model weights
+.wheels/
+**/wheels/
+assets/qwen3-1.7b/
+**/assets/*.safetensors
+*.gguf
+
+# Runtime state
+**/runtime/
+*.log
+*.err.log
+*.pid
+**/pids.json
+
+# Local tools and editor files
+.tools/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+~$*

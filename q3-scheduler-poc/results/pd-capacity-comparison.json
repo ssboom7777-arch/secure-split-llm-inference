@@ -1,0 +1,97 @@
+{
+  "method": "discrete-event simulation calibrated by real MiniMind sustained run",
+  "calibration": {
+    "prefill_busy_seconds": 340.0542132999981,
+    "decode_busy_seconds": 66.4525207998231,
+    "decode_jobs": 1668,
+    "requests": 194,
+    "link": "500 km / 10 Gbps",
+    "cloud_kv_link_gbps": 100.0
+  },
+  "results": [
+    {
+      "name": "1-unified",
+      "workers": {
+        "u": 1
+      },
+      "wall_seconds": 414.5028767286508,
+      "throughput_requests_per_second": 0.46803052739004203,
+      "ttft_p95_seconds": 77.24566073118979,
+      "tpot_p95_seconds": 61.65298445721396,
+      "latency_p95_seconds": 306.93452509523945,
+      "prefill_queue_wait_mean_seconds": 38.00632734911635,
+      "decode_queue_wait_mean_seconds": 142.39002082523854,
+      "pool_busy_ratio": {
+        "u": 0.9807090780842861
+      },
+      "instance_seconds": 414.5028767286508,
+      "kv_transfer_gib": 0.0,
+      "kv_transfer_serialized_seconds": 0.0,
+      "relative_cost": 1.0
+    },
+    {
+      "name": "2-unified",
+      "workers": {
+        "u": 2
+      },
+      "wall_seconds": 306.86854095304676,
+      "throughput_requests_per_second": 0.632192532338085,
+      "ttft_p95_seconds": 11.334567461491844,
+      "tpot_p95_seconds": 3.6049067268388626,
+      "latency_p95_seconds": 34.974689142229266,
+      "prefill_queue_wait_mean_seconds": 1.207918107344599,
+      "decode_queue_wait_mean_seconds": 4.568577979880631,
+      "pool_busy_ratio": {
+        "u": 0.6623467052656106
+      },
+      "instance_seconds": 613.7370819060935,
+      "kv_transfer_gib": 0.0,
+      "kv_transfer_serialized_seconds": 0.0,
+      "relative_cost": 1.4806581965120327
+    },
+    {
+      "name": "1P-1D",
+      "workers": {
+        "p": 1,
+        "d": 1
+      },
+      "wall_seconds": 357.167299392817,
+      "throughput_requests_per_second": 0.5431628268595676,
+      "ttft_p95_seconds": 66.52703764931357,
+      "tpot_p95_seconds": 0.19919820383648812,
+      "latency_p95_seconds": 67.65089141190009,
+      "prefill_queue_wait_mean_seconds": 31.009657201177532,
+      "decode_queue_wait_mean_seconds": 0.36876505406807386,
+      "pool_busy_ratio": {
+        "p": 0.9520866380491374,
+        "d": 0.18605432499782293
+      },
+      "instance_seconds": 714.334598785634,
+      "kv_transfer_gib": 5.351142883300781,
+      "kv_transfer_serialized_seconds": 0.479059673599999,
+      "relative_cost": 1.7233525721783212
+    },
+    {
+      "name": "2P-1D",
+      "workers": {
+        "p": 2,
+        "d": 1
+      },
+      "wall_seconds": 306.48897763881433,
+      "throughput_requests_per_second": 0.6329754547604699,
+      "ttft_p95_seconds": 11.326492151591083,
+      "tpot_p95_seconds": 0.1593585630690768,
+      "latency_p95_seconds": 11.515851893540173,
+      "prefill_queue_wait_mean_seconds": 1.0159794967095772,
+      "decode_queue_wait_mean_seconds": 0.17999318917923382,
+      "pool_busy_ratio": {
+        "p": 0.5547576554298437,
+        "d": 0.2168186318208731
+      },
+      "instance_seconds": 919.466932916443,
+      "kv_transfer_gib": 5.351142883300781,
+      "kv_transfer_serialized_seconds": 0.47905967359999896,
+      "relative_cost": 2.2182401728380783
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "model": "Qwen3-32B BF16",
+  "hardware": "8x NVIDIA H20 (assumption profile)",
+  "workload": {
+    "input_tokens": 4096,
+    "output_tokens": 256,
+    "prefill_batch": 1,
+    "decode_batch": 8,
+    "batch_window_ms": 3.0,
+    "distance_km": 500.0,
+    "bandwidth_gbps": 10.0,
+    "enterprise_prefill_ms": 20.0,
+    "enterprise_decode_ms": 2.0,
+    "request_duration_seconds": 15.0,
+    "queue_model": "discrete_event",
+    "latency_percentile": 0.95,
+    "simulation_requests": 300,
+    "simulation_warmup_requests": 50,
+    "simulation_seed": 20260927,
+    "qps_search_iterations": 16,
+    "max_decode_burst": 4,
+    "prefill_starvation_ms": 500.0,
+    "max_utilization": 0.9,
+    "slo": {
+      "ttft_seconds": 3.0,
+      "tpot_seconds": 0.1
+    }
+  },
+  "prediction": {
+    "qps": 0.9682782135009764,
+    "ttft_seconds": 2.8893451666029364,
+    "tpot_seconds": 0.08777693116162771,
+    "utilization": 0.8985900226589614,
+    "simulated_completed_qps": 1.0096983825096721,
+    "mean_request_duration_seconds": 11.768294142665418,
+    "weights_gb": 62.488,
+    "estimated_kv_cache_gb": 12.999973999544384,
+    "memory_ok": true,
+    "simulation_requests": 300,
+    "simulation_warmup_requests": 50,
+    "latency_percentile": 0.95,
+    "queue_model": "token-level discrete event, decode-first",
+    "limiting_constraint": "resource_limit",
+    "constraint_ratios": {
+      "resource_limit": 0.9984333585099571,
+      "ttft_limit": 0.9631150555343121,
+      "tpot_limit": 0.8777693116162771,
+      "memory_limit": 0.10921292534656304
+    },
+    "first_failing_qps": 0.9682934570312499
+  },
+  "classification": "token-level discrete-event prediction, not a measurement on the target GPU"
+}

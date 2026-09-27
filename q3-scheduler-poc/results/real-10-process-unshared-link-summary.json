@@ -1,0 +1,3048 @@
+﻿{
+    "configuration":  {
+                          "enterprise_processes":  2,
+                          "duration_seconds":  120,
+                          "users":  5,
+                          "per_process_torch_threads":  1,
+                          "cloud_processes":  8
+                      },
+    "load":  {
+                 "label":  "real-10-process",
+                 "schedule_assumptions":  {
+                                              "duration_seconds":  120.0,
+                                              "users":  5,
+                                              "mean_user_interval_seconds":  8.0,
+                                              "arrival":  "per-user exponential",
+                                              "prompt_mix":  {
+                                                                 "short_24_words":  0.6,
+                                                                 "medium_96_words":  0.3,
+                                                                 "long_384_words":  0.1
+                                                             },
+                                              "max_new_tokens_mix":  {
+                                                                         "4":  0.3,
+                                                                         "8":  0.5,
+                                                                         "16":  0.2
+                                                                     },
+                                              "seed":  20260925
+                                          },
+                 "client":  {
+                                "scheduled_duration_seconds":  120.0,
+                                "wall_seconds_including_drain":  168.19501510000555,
+                                "request_count":  84,
+                                "generated_steps":  704,
+                                "requests_per_second":  0.4994202708686414,
+                                "generated_steps_per_second":  4.185617508232423,
+                                "latency_mean_seconds":  23.361172451190733,
+                                "latency_p50_seconds":  7.850486400013324,
+                                "latency_p95_seconds":  85.51897400000598,
+                                "latency_p99_seconds":  101.33249210001668,
+                                "ttft_p95_seconds":  60.53320459998213,
+                                "tpot_p95_seconds":  3.9537615066665848,
+                                "arrival_dispatch_lag_p95_seconds":  0.0007103091744511403
+                            },
+                 "cloud":  {
+                               "wall_seconds":  168.2178807000164,
+                               "busy_seconds":  81.8158230005647,
+                               "busy_ratio":  0.4863681712080726,
+                               "jobs_completed":  108,
+                               "prefill_jobs":  12,
+                               "decode_jobs":  96,
+                               "forward_batches":  108,
+                               "average_batch_size":  1.0,
+                               "max_observed_batch_size":  1,
+                               "configured_max_batch_size":  1,
+                               "batch_window_ms":  0.0,
+                               "scheduling_policy":  "fifo",
+                               "max_decode_burst":  4,
+                               "prefill_starvation_ms":  500.0,
+                               "average_queue_wait_ms":  1491.0780898159526,
+                               "prefill_average_queue_wait_ms":  8142.441033337187,
+                               "decode_average_queue_wait_ms":  659.6577218757981,
+                               "prefill_busy_seconds":  75.70227459998569,
+                               "decode_busy_seconds":  6.11354840057902,
+                               "network_bytes":  {
+                                                     "prefill":  94519296,
+                                                     "decode":  589824
+                                                 },
+                               "simulated_network_delay_seconds":  {
+                                                                       "prefill":  0.1356154368,
+                                                                       "decode":  0.4804718592000004
+                                                                   }
+                           },
+                 "requests":  [
+                                  {
+                                      "id":  0,
+                                      "user_id":  4,
+                                      "user_sequence":  0,
+                                      "scheduled_at_seconds":  3.001213136174768,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  3.001826499996241,
+                                      "completed_at_seconds":  4.549088899977505,
+                                      "latency_seconds":  1.5461110000032932,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7297940999851562,
+                                                     "mean_tpot_seconds":  0.049098093334274985,
+                                                     "max_tpot_seconds":  0.05848340003285557,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  1,
+                                      "user_id":  0,
+                                      "user_sequence":  0,
+                                      "scheduled_at_seconds":  3.196893621154359,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  3.1974267999758013,
+                                      "completed_at_seconds":  4.331423599971458,
+                                      "latency_seconds":  1.1334532999899238,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6754084000131115,
+                                                     "mean_tpot_seconds":  0.05180402856785804,
+                                                     "max_tpot_seconds":  0.05721709999488667,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  2,
+                                      "user_id":  4,
+                                      "user_sequence":  1,
+                                      "scheduled_at_seconds":  3.360517659105692,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  3.3611983999726363,
+                                      "completed_at_seconds":  72.13112959999125,
+                                      "latency_seconds":  68.76929099997506,
+                                      "text":  "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  29.361367099976633,
+                                                     "mean_tpot_seconds":  2.6160616133362056,
+                                                     "max_tpot_seconds":  31.285658900043927,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  3,
+                                      "user_id":  0,
+                                      "user_sequence":  1,
+                                      "scheduled_at_seconds":  7.717400181075217,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  7.718132900015917,
+                                      "completed_at_seconds":  71.05018309998559,
+                                      "latency_seconds":  63.33188939996762,
+                                      "text":  "\n\n\n\n\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  55.530823400011286,
+                                                     "mean_tpot_seconds":  1.0384556142879384,
+                                                     "max_tpot_seconds":  4.482193899981212,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  4,
+                                      "user_id":  3,
+                                      "user_sequence":  0,
+                                      "scheduled_at_seconds":  9.372994023505164,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  9.373360999976285,
+                                      "completed_at_seconds":  10.409257999970578,
+                                      "latency_seconds":  1.0356687000021338,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6303655999945477,
+                                                     "mean_tpot_seconds":  0.0462055428568939,
+                                                     "max_tpot_seconds":  0.05317789997207001,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  5,
+                                      "user_id":  3,
+                                      "user_sequence":  1,
+                                      "scheduled_at_seconds":  15.23124023346406,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  15.23177549999673,
+                                      "completed_at_seconds":  16.2924337000004,
+                                      "latency_seconds":  1.0604547000257298,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6225456999964081,
+                                                     "mean_tpot_seconds":  0.050295842853042165,
+                                                     "max_tpot_seconds":  0.055643800005782396,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  6,
+                                      "user_id":  0,
+                                      "user_sequence":  2,
+                                      "scheduled_at_seconds":  15.320441356525077,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  15.320830399985425,
+                                      "completed_at_seconds":  16.30353879998438,
+                                      "latency_seconds":  0.9821434000041336,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6199611000483856,
+                                                     "mean_tpot_seconds":  0.044780728565196375,
+                                                     "max_tpot_seconds":  0.05807919998187572,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  7,
+                                      "user_id":  4,
+                                      "user_sequence":  2,
+                                      "scheduled_at_seconds":  17.21847996954827,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  17.218672499991953,
+                                      "completed_at_seconds":  18.965320199960843,
+                                      "latency_seconds":  1.7463693999452516,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6676705999998376,
+                                                     "mean_tpot_seconds":  0.1397165571356059,
+                                                     "max_tpot_seconds":  0.6699608999770135,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  8,
+                                      "user_id":  3,
+                                      "user_sequence":  2,
+                                      "scheduled_at_seconds":  17.492433327189865,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  17.492714299994987,
+                                      "completed_at_seconds":  19.481511799967848,
+                                      "latency_seconds":  1.9885701999883167,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  1.062922500015702,
+                                                     "mean_tpot_seconds":  0.055871213332284245,
+                                                     "max_tpot_seconds":  0.07411159999901429,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  9,
+                                      "user_id":  2,
+                                      "user_sequence":  0,
+                                      "scheduled_at_seconds":  19.861161592432847,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  19.86133260000497,
+                                      "completed_at_seconds":  21.260457399999723,
+                                      "latency_seconds":  1.3989849000354297,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.8986332000349648,
+                                                     "mean_tpot_seconds":  0.055764199999560206,
+                                                     "max_tpot_seconds":  0.0670617000432685,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  10,
+                                      "user_id":  1,
+                                      "user_sequence":  0,
+                                      "scheduled_at_seconds":  19.997597942287875,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  19.998050900001545,
+                                      "completed_at_seconds":  21.250843599962536,
+                                      "latency_seconds":  1.2526134999934584,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7466630000271834,
+                                                     "mean_tpot_seconds":  0.05928972857405564,
+                                                     "max_tpot_seconds":  0.07152850000420585,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  11,
+                                      "user_id":  2,
+                                      "user_sequence":  1,
+                                      "scheduled_at_seconds":  20.577654837172336,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  20.578160599980038,
+                                      "completed_at_seconds":  56.41808089998085,
+                                      "latency_seconds":  35.83912389999023,
+                                      "text":  "\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  29.445407400024123,
+                                                     "mean_tpot_seconds":  2.00981863331981,
+                                                     "max_tpot_seconds":  5.522239099955186,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  12,
+                                      "user_id":  2,
+                                      "user_sequence":  2,
+                                      "scheduled_at_seconds":  27.802481779028597,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  27.80326509999577,
+                                      "completed_at_seconds":  71.04384459997527,
+                                      "latency_seconds":  43.24049459997332,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  36.062794199970085,
+                                                     "mean_tpot_seconds":  0.9561333142836312,
+                                                     "max_tpot_seconds":  3.889382600027602,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  13,
+                                      "user_id":  4,
+                                      "user_sequence":  3,
+                                      "scheduled_at_seconds":  28.637552767599217,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  28.637872999999672,
+                                      "completed_at_seconds":  30.1641307999962,
+                                      "latency_seconds":  1.5260601000045426,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6679086000076495,
+                                                     "mean_tpot_seconds":  0.05113841333271315,
+                                                     "max_tpot_seconds":  0.07221539999591187,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  14,
+                                      "user_id":  2,
+                                      "user_sequence":  3,
+                                      "scheduled_at_seconds":  29.041609264963615,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  29.04171919997316,
+                                      "completed_at_seconds":  32.56848399998853,
+                                      "latency_seconds":  3.52629780001007,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  3.217714399972465,
+                                                     "mean_tpot_seconds":  0.07238586666062474,
+                                                     "max_tpot_seconds":  0.08098849997622892,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  15,
+                                      "user_id":  2,
+                                      "user_sequence":  4,
+                                      "scheduled_at_seconds":  29.840215332952983,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  29.840910199971404,
+                                      "completed_at_seconds":  57.49141089996556,
+                                      "latency_seconds":  27.649700799956918,
+                                      "text":  "I don\u0027t have the ability to access or provide the specific requested information.",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840,
+                                                        522,
+                                                        1017,
+                                                        309,
+                                                        1197,
+                                                        4523,
+                                                        382,
+                                                        1217,
+                                                        49
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  24.234609800041653,
+                                                     "mean_tpot_seconds":  0.22046162666520103,
+                                                     "max_tpot_seconds":  1.5127114999922924,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  16,
+                                      "user_id":  4,
+                                      "user_sequence":  4,
+                                      "scheduled_at_seconds":  30.248653643312277,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  30.249259300006088,
+                                      "completed_at_seconds":  33.900065699999686,
+                                      "latency_seconds":  3.650730900000781,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  3.363487399998121,
+                                                     "mean_tpot_seconds":  0.06729830000161503,
+                                                     "max_tpot_seconds":  0.07086710003204644,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  17,
+                                      "user_id":  2,
+                                      "user_sequence":  5,
+                                      "scheduled_at_seconds":  33.96429872446536,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  33.96494219999295,
+                                      "completed_at_seconds":  35.035255199996755,
+                                      "latency_seconds":  1.0702109999838285,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6746882000006735,
+                                                     "mean_tpot_seconds":  0.04515728570653924,
+                                                     "max_tpot_seconds":  0.053341399994678795,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  18,
+                                      "user_id":  2,
+                                      "user_sequence":  6,
+                                      "scheduled_at_seconds":  38.32752117842657,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  38.327969199977815,
+                                      "completed_at_seconds":  42.39955219998956,
+                                      "latency_seconds":  4.07134500000393,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  3.471151400008239,
+                                                     "mean_tpot_seconds":  0.06931461428757757,
+                                                     "max_tpot_seconds":  0.09268509998219088,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  19,
+                                      "user_id":  3,
+                                      "user_sequence":  3,
+                                      "scheduled_at_seconds":  38.7419414903102,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  38.74235159996897,
+                                      "completed_at_seconds":  39.683457600011025,
+                                      "latency_seconds":  0.9410032000159845,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7032907999819145,
+                                                     "mean_tpot_seconds":  0.0521684666746296,
+                                                     "max_tpot_seconds":  0.057728399988263845,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  20,
+                                      "user_id":  2,
+                                      "user_sequence":  7,
+                                      "scheduled_at_seconds":  39.076200239209754,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  39.0764513000031,
+                                      "completed_at_seconds":  56.90725459996611,
+                                      "latency_seconds":  17.829926199978217,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  15.673011699982453,
+                                                     "mean_tpot_seconds":  0.28239888571468846,
+                                                     "max_tpot_seconds":  0.8615526000503451,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  21,
+                                      "user_id":  0,
+                                      "user_sequence":  3,
+                                      "scheduled_at_seconds":  40.50073051176385,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  40.501365099975374,
+                                      "completed_at_seconds":  41.63605319999624,
+                                      "latency_seconds":  1.134519100014586,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.8705123999970965,
+                                                     "mean_tpot_seconds":  0.058284433325752616,
+                                                     "max_tpot_seconds":  0.06426030001603067,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  22,
+                                      "user_id":  2,
+                                      "user_sequence":  8,
+                                      "scheduled_at_seconds":  41.51946005388618,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  41.51965809997637,
+                                      "completed_at_seconds":  56.47143229999347,
+                                      "latency_seconds":  14.95095000002766,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  13.937068700033706,
+                                                     "mean_tpot_seconds":  0.243477333317666,
+                                                     "max_tpot_seconds":  0.28905060002580285,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  23,
+                                      "user_id":  1,
+                                      "user_sequence":  1,
+                                      "scheduled_at_seconds":  42.189463458802166,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  42.18995799997356,
+                                      "completed_at_seconds":  43.3757471999852,
+                                      "latency_seconds":  1.1856713999877684,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.8095930999843404,
+                                                     "mean_tpot_seconds":  0.0430621571472979,
+                                                     "max_tpot_seconds":  0.05151359998853877,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  24,
+                                      "user_id":  2,
+                                      "user_sequence":  9,
+                                      "scheduled_at_seconds":  43.998358572921504,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  43.998598099977244,
+                                      "completed_at_seconds":  48.900849399971776,
+                                      "latency_seconds":  4.902143999992404,
+                                      "text":  "I don\u0027t have the ability to access or provide the specific request for information on",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840,
+                                                        522,
+                                                        1017,
+                                                        309,
+                                                        1197,
+                                                        4523,
+                                                        503,
+                                                        1217,
+                                                        619
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  3.732361399976071,
+                                                     "mean_tpot_seconds":  0.07172539333502452,
+                                                     "max_tpot_seconds":  0.08782499999506399,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  25,
+                                      "user_id":  3,
+                                      "user_sequence":  4,
+                                      "scheduled_at_seconds":  44.155726449341685,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  44.156085999973584,
+                                      "completed_at_seconds":  45.62799090001499,
+                                      "latency_seconds":  1.471698000037577,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.9699649999965914,
+                                                     "mean_tpot_seconds":  0.05719727142215041,
+                                                     "max_tpot_seconds":  0.07016050000675023,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  26,
+                                      "user_id":  3,
+                                      "user_sequence":  5,
+                                      "scheduled_at_seconds":  45.02534596152512,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  45.02598500001477,
+                                      "completed_at_seconds":  69.10925579996547,
+                                      "latency_seconds":  24.08226369996555,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  21.987114800023846,
+                                                     "mean_tpot_seconds":  0.5586089999997057,
+                                                     "max_tpot_seconds":  0.9129031000193208,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  27,
+                                      "user_id":  4,
+                                      "user_sequence":  5,
+                                      "scheduled_at_seconds":  47.35981251928004,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  47.36006689997157,
+                                      "completed_at_seconds":  48.6328138000099,
+                                      "latency_seconds":  1.272499600017909,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7994630999746732,
+                                                     "mean_tpot_seconds":  0.05171845714461857,
+                                                     "max_tpot_seconds":  0.06612969998968765,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  28,
+                                      "user_id":  1,
+                                      "user_sequence":  2,
+                                      "scheduled_at_seconds":  48.75612907631192,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  48.75636369996937,
+                                      "completed_at_seconds":  53.61028799996711,
+                                      "latency_seconds":  4.853684599976987,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  4.214972000045236,
+                                                     "mean_tpot_seconds":  0.07569965713524393,
+                                                     "max_tpot_seconds":  0.08427930000470951,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  29,
+                                      "user_id":  3,
+                                      "user_sequence":  6,
+                                      "scheduled_at_seconds":  49.30115671524258,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  49.30163999996148,
+                                      "completed_at_seconds":  54.89581909996923,
+                                      "latency_seconds":  5.593971199996304,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  4.322338400001172,
+                                                     "mean_tpot_seconds":  0.16566549999905483,
+                                                     "max_tpot_seconds":  0.7126575000002049,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  30,
+                                      "user_id":  4,
+                                      "user_sequence":  6,
+                                      "scheduled_at_seconds":  51.34441201448384,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  51.344734199985396,
+                                      "completed_at_seconds":  55.31349729996873,
+                                      "latency_seconds":  3.967919099959545,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  2.960242400004063,
+                                                     "mean_tpot_seconds":  0.061058873330087714,
+                                                     "max_tpot_seconds":  0.08196909999242052,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  31,
+                                      "user_id":  0,
+                                      "user_sequence":  4,
+                                      "scheduled_at_seconds":  55.098990050707464,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  55.099123599997256,
+                                      "completed_at_seconds":  71.07282349996967,
+                                      "latency_seconds":  15.97358200000599,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  12.526543400017545,
+                                                     "mean_tpot_seconds":  0.44102520000056494,
+                                                     "max_tpot_seconds":  0.9374339999631047,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  32,
+                                      "user_id":  2,
+                                      "user_sequence":  10,
+                                      "scheduled_at_seconds":  62.2351403008318,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  62.23579949996201,
+                                      "completed_at_seconds":  63.323417000006884,
+                                      "latency_seconds":  1.0874958999920636,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6323071999941021,
+                                                     "mean_tpot_seconds":  0.052464471431449056,
+                                                     "max_tpot_seconds":  0.09307990001980215,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  33,
+                                      "user_id":  0,
+                                      "user_sequence":  5,
+                                      "scheduled_at_seconds":  64.12369458888892,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  64.1243466999731,
+                                      "completed_at_seconds":  65.3320842999965,
+                                      "latency_seconds":  1.2074854000238702,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7372861999901943,
+                                                     "mean_tpot_seconds":  0.0566973142891324,
+                                                     "max_tpot_seconds":  0.07356450002407655,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  34,
+                                      "user_id":  0,
+                                      "user_sequence":  6,
+                                      "scheduled_at_seconds":  64.16040042363163,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  64.16055129998131,
+                                      "completed_at_seconds":  68.49187570001232,
+                                      "latency_seconds":  4.331197100051213,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  3.051854600023944,
+                                                     "mean_tpot_seconds":  0.16562724285592725,
+                                                     "max_tpot_seconds":  0.6532759999972768,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  35,
+                                      "user_id":  4,
+                                      "user_sequence":  7,
+                                      "scheduled_at_seconds":  64.30355813482836,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  64.30399420001777,
+                                      "completed_at_seconds":  165.63662890001433,
+                                      "latency_seconds":  101.33249210001668,
+                                      "text":  "\n\n\n\n\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  37.057337999984156,
+                                                     "mean_tpot_seconds":  9.09232218571872,
+                                                     "max_tpot_seconds":  55.59514810005203,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  36,
+                                      "user_id":  4,
+                                      "user_sequence":  8,
+                                      "scheduled_at_seconds":  64.71372420049795,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  64.71430019999389,
+                                      "completed_at_seconds":  68.23086650000187,
+                                      "latency_seconds":  3.516374099999666,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  3.1087052000220865,
+                                                     "mean_tpot_seconds":  0.08368743333267048,
+                                                     "max_tpot_seconds":  0.08499180001672357,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  37,
+                                      "user_id":  3,
+                                      "user_sequence":  7,
+                                      "scheduled_at_seconds":  65.29781279094144,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  65.29838479997125,
+                                      "completed_at_seconds":  66.30752590001794,
+                                      "latency_seconds":  1.009047300030943,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7497677999781445,
+                                                     "mean_tpot_seconds":  0.05455290000342453,
+                                                     "max_tpot_seconds":  0.07128189998911694,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  38,
+                                      "user_id":  3,
+                                      "user_sequence":  8,
+                                      "scheduled_at_seconds":  67.9160479372866,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  67.91673260001699,
+                                      "completed_at_seconds":  69.04247539996868,
+                                      "latency_seconds":  1.1256324999849312,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.862397399963811,
+                                                     "mean_tpot_seconds":  0.05761320000359168,
+                                                     "max_tpot_seconds":  0.06122550001600757,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  39,
+                                      "user_id":  1,
+                                      "user_sequence":  3,
+                                      "scheduled_at_seconds":  68.46840742487338,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  68.4689931999892,
+                                      "completed_at_seconds":  167.9194000000134,
+                                      "latency_seconds":  99.45028690004256,
+                                      "text":  "I don\u0027t have the ability to access or provide the specific requested information.",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840,
+                                                        522,
+                                                        1017,
+                                                        309,
+                                                        1197,
+                                                        4523,
+                                                        382,
+                                                        1217,
+                                                        49
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  39.842375900014304,
+                                                     "mean_tpot_seconds":  3.9537615066665848,
+                                                     "max_tpot_seconds":  52.828023199981544,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  40,
+                                      "user_id":  1,
+                                      "user_sequence":  4,
+                                      "scheduled_at_seconds":  68.8766235899262,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  68.87703729997156,
+                                      "completed_at_seconds":  71.80626270000357,
+                                      "latency_seconds":  2.9290638000238687,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.9770386999589391,
+                                                     "mean_tpot_seconds":  0.23907512857113034,
+                                                     "max_tpot_seconds":  0.3470659000449814,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  41,
+                                      "user_id":  4,
+                                      "user_sequence":  9,
+                                      "scheduled_at_seconds":  71.30735261916567,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  71.30796030000784,
+                                      "completed_at_seconds":  165.63677460001782,
+                                      "latency_seconds":  94.32872790005058,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  38.59413199999835,
+                                                     "mean_tpot_seconds":  7.88922611428591,
+                                                     "max_tpot_seconds":  51.28367619996425,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  42,
+                                      "user_id":  3,
+                                      "user_sequence":  9,
+                                      "scheduled_at_seconds":  72.71587661182218,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  72.71618779998971,
+                                      "completed_at_seconds":  163.75271729996894,
+                                      "latency_seconds":  91.03637059999164,
+                                      "text":  "\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  76.1602961999597,
+                                                     "mean_tpot_seconds":  4.736235099999855,
+                                                     "max_tpot_seconds":  13.10542760003591,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  43,
+                                      "user_id":  1,
+                                      "user_sequence":  5,
+                                      "scheduled_at_seconds":  73.42745020811142,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  73.42778009996982,
+                                      "completed_at_seconds":  77.32044569996651,
+                                      "latency_seconds":  3.892420799995307,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  2.9666749999742024,
+                                                     "mean_tpot_seconds":  0.2590353333313639,
+                                                     "max_tpot_seconds":  0.6246196000138298,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  44,
+                                      "user_id":  0,
+                                      "user_sequence":  7,
+                                      "scheduled_at_seconds":  75.4755173722045,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  75.47619929997018,
+                                      "completed_at_seconds":  77.34923619998153,
+                                      "latency_seconds":  1.8728549999650568,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  1.5134460999979638,
+                                                     "mean_tpot_seconds":  0.0753205666745392,
+                                                     "max_tpot_seconds":  0.09427270002197474,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  45,
+                                      "user_id":  3,
+                                      "user_sequence":  10,
+                                      "scheduled_at_seconds":  75.70326322430121,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  75.70358289999422,
+                                      "completed_at_seconds":  76.64388220000546,
+                                      "latency_seconds":  0.9401660000439733,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6861906999838538,
+                                                     "mean_tpot_seconds":  0.05631983334509035,
+                                                     "max_tpot_seconds":  0.06131160003133118,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  46,
+                                      "user_id":  3,
+                                      "user_sequence":  11,
+                                      "scheduled_at_seconds":  77.1228569453052,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  77.12319489999209,
+                                      "completed_at_seconds":  78.72859329998028,
+                                      "latency_seconds":  1.6052100000088103,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.6715756999910809,
+                                                     "mean_tpot_seconds":  0.270430333330296,
+                                                     "max_tpot_seconds":  0.6719750000047497,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  47,
+                                      "user_id":  4,
+                                      "user_sequence":  10,
+                                      "scheduled_at_seconds":  77.475853249665,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  77.47609780001221,
+                                      "completed_at_seconds":  78.75431330001447,
+                                      "latency_seconds":  1.278116700006649,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.9838539999909699,
+                                                     "mean_tpot_seconds":  0.062246066653945796,
+                                                     "max_tpot_seconds":  0.07169029995566234,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  48,
+                                      "user_id":  0,
+                                      "user_sequence":  8,
+                                      "scheduled_at_seconds":  77.58225574441538,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  77.58275299996603,
+                                      "completed_at_seconds":  136.25831269996706,
+                                      "latency_seconds":  58.67537119996268,
+                                      "text":  "\n\n\n\n\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  46.713176499994006,
+                                                     "mean_tpot_seconds":  1.6546241571444884,
+                                                     "max_tpot_seconds":  9.713967699964996,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  49,
+                                      "user_id":  2,
+                                      "user_sequence":  11,
+                                      "scheduled_at_seconds":  80.76703380079447,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  80.76725739997346,
+                                      "completed_at_seconds":  81.88942179997684,
+                                      "latency_seconds":  1.1220182999968529,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.7017745000193827,
+                                                     "mean_tpot_seconds":  0.05112507142725268,
+                                                     "max_tpot_seconds":  0.06485050002811477,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  50,
+                                      "user_id":  0,
+                                      "user_sequence":  9,
+                                      "scheduled_at_seconds":  82.0254710399167,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  82.0260332999751,
+                                      "completed_at_seconds":  89.51050069998018,
+                                      "latency_seconds":  7.4843624999630265,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  0.8484325000317767,
+                                                     "mean_tpot_seconds":  0.42681794000091033,
+                                                     "max_tpot_seconds":  5.62590690003708,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  51,
+                                      "user_id":  0,
+                                      "user_sequence":  10,
+                                      "scheduled_at_seconds":  82.2670501617943,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  82.26735539996298,
+                                      "completed_at_seconds":  139.8754320999724,
+                                      "latency_seconds":  57.60782059998019,
+                                      "text":  "\n\n\n\n\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  47.959084299975075,
+                                                     "mean_tpot_seconds":  1.3358139714276018,
+                                                     "max_tpot_seconds":  8.112086699984502,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  52,
+                                      "user_id":  2,
+                                      "user_sequence":  12,
+                                      "scheduled_at_seconds":  82.64760933726417,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  82.64814710000064,
+                                      "completed_at_seconds":  168.16726750001544,
+                                      "latency_seconds":  85.51897400000598,
+                                      "text":  "I don\u0027t have the ability to access or provide the specific requested information.",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840,
+                                                        522,
+                                                        1017,
+                                                        309,
+                                                        1197,
+                                                        4523,
+                                                        382,
+                                                        1217,
+                                                        49
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  69.4845252999803,
+                                                     "mean_tpot_seconds":  1.0389485533349216,
+                                                     "max_tpot_seconds":  9.915047799993772,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  53,
+                                      "user_id":  1,
+                                      "user_sequence":  6,
+                                      "scheduled_at_seconds":  83.51467922702982,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  83.5154870999977,
+                                      "completed_at_seconds":  141.04050579998875,
+                                      "latency_seconds":  57.524658099981025,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  5.7660895000444725,
+                                                     "mean_tpot_seconds":  0.21758609998505563,
+                                                     "max_tpot_seconds":  0.30030910001369193,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  54,
+                                      "user_id":  0,
+                                      "user_sequence":  11,
+                                      "scheduled_at_seconds":  87.19925487023525,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  87.19981089996872,
+                                      "completed_at_seconds":  165.91041169996606,
+                                      "latency_seconds":  78.71032650000416,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  65.57383509998908,
+                                                     "mean_tpot_seconds":  1.7774858142864625,
+                                                     "max_tpot_seconds":  9.286840300017502,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  55,
+                                      "user_id":  3,
+                                      "user_sequence":  12,
+                                      "scheduled_at_seconds":  88.99958205145161,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  88.99999969999772,
+                                      "completed_at_seconds":  99.2025369000039,
+                                      "latency_seconds":  10.202388300036546,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  5.992517700011376,
+                                                     "mean_tpot_seconds":  0.7618549333419651,
+                                                     "max_tpot_seconds":  1.7790297000319697,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  56,
+                                      "user_id":  1,
+                                      "user_sequence":  7,
+                                      "scheduled_at_seconds":  89.41323107781416,
+                                      "size_class":  "long",
+                                      "prompt_words":  384,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  89.413920699968,
+                                      "completed_at_seconds":  143.43717599997763,
+                                      "latency_seconds":  54.022512800002005,
+                                      "text":  "\n\n\n\n\n\n\n\n",
+                                      "token_ids":  [
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234,
+                                                        234
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  47.634964799974114,
+                                                     "mean_tpot_seconds":  0.8673417285733324,
+                                                     "max_tpot_seconds":  4.817407900001854,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  57,
+                                      "user_id":  3,
+                                      "user_sequence":  13,
+                                      "scheduled_at_seconds":  90.19354359759801,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  90.19398619997082,
+                                      "completed_at_seconds":  143.43043619999662,
+                                      "latency_seconds":  53.23629109998001,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  47.47486370004481,
+                                                     "mean_tpot_seconds":  0.7823893142797586,
+                                                     "max_tpot_seconds":  4.2232108999742195,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  58,
+                                      "user_id":  4,
+                                      "user_sequence":  11,
+                                      "scheduled_at_seconds":  91.45729400015225,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  91.45784629997797,
+                                      "completed_at_seconds":  99.30904480000027,
+                                      "latency_seconds":  7.850486400013324,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  4.413793800049461,
+                                                     "mean_tpot_seconds":  0.4959620999870822,
+                                                     "max_tpot_seconds":  0.9660379999550059,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  59,
+                                      "user_id":  0,
+                                      "user_sequence":  12,
+                                      "scheduled_at_seconds":  92.13059354874451,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  92.13082459999714,
+                                      "completed_at_seconds":  100.17667939997045,
+                                      "latency_seconds":  8.045092399988789,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  4.548242400051095,
+                                                     "mean_tpot_seconds":  0.22652189999741193,
+                                                     "max_tpot_seconds":  1.8609692999743856,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  60,
+                                      "user_id":  4,
+                                      "user_sequence":  12,
+                                      "scheduled_at_seconds":  93.07893374472845,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  93.07916959997965,
+                                      "completed_at_seconds":  143.43767060001846,
+                                      "latency_seconds":  50.357425900001545,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  47.97229459998198,
+                                                     "mean_tpot_seconds":  0.30508805714946774,
+                                                     "max_tpot_seconds":  0.8851238000206649,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  61,
+                                      "user_id":  3,
+                                      "user_sequence":  14,
+                                      "scheduled_at_seconds":  94.01503650208957,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  94.01567220001016,
+                                      "completed_at_seconds":  168.17011910001747,
+                                      "latency_seconds":  74.15355280000949,
+                                      "text":  "I don\u0027t have the ability to access or provide the specific request for information on",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840,
+                                                        522,
+                                                        1017,
+                                                        309,
+                                                        1197,
+                                                        4523,
+                                                        503,
+                                                        1217,
+                                                        619
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  62.165120999969076,
+                                                     "mean_tpot_seconds":  0.772156973334495,
+                                                     "max_tpot_seconds":  5.936140300007537,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  62,
+                                      "user_id":  1,
+                                      "user_sequence":  8,
+                                      "scheduled_at_seconds":  95.43155813420499,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  95.43187610001769,
+                                      "completed_at_seconds":  136.2490523000015,
+                                      "latency_seconds":  40.81639340001857,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  32.612677500001155,
+                                                     "mean_tpot_seconds":  1.1269432857183606,
+                                                     "max_tpot_seconds":  6.0124727000365965,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  63,
+                                      "user_id":  2,
+                                      "user_sequence":  13,
+                                      "scheduled_at_seconds":  95.70287697810942,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  95.703110500006,
+                                      "completed_at_seconds":  139.87591210001847,
+                                      "latency_seconds":  44.17210340005113,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  38.582451099995524,
+                                                     "mean_tpot_seconds":  0.7609378999997196,
+                                                     "max_tpot_seconds":  4.078477800008841,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  64,
+                                      "user_id":  2,
+                                      "user_sequence":  14,
+                                      "scheduled_at_seconds":  96.28895959796138,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  96.28967659996124,
+                                      "completed_at_seconds":  168.16813810000895,
+                                      "latency_seconds":  71.87658360000933,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  60.53320459998213,
+                                                     "mean_tpot_seconds":  0.7312607600004413,
+                                                     "max_tpot_seconds":  5.3146823000279255,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  65,
+                                      "user_id":  1,
+                                      "user_sequence":  9,
+                                      "scheduled_at_seconds":  96.47609023901431,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  96.47679260000587,
+                                      "completed_at_seconds":  119.72294710000278,
+                                      "latency_seconds":  23.244713900028728,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  8.193197400018107,
+                                                     "mean_tpot_seconds":  4.9210007999984855,
+                                                     "max_tpot_seconds":  8.755720699962694,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  66,
+                                      "user_id":  0,
+                                      "user_sequence":  13,
+                                      "scheduled_at_seconds":  96.68469195230195,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  96.68507880001562,
+                                      "completed_at_seconds":  106.8384628999629,
+                                      "latency_seconds":  10.151257799996529,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  7.65901840000879,
+                                                     "mean_tpot_seconds":  0.3321271857130341,
+                                                     "max_tpot_seconds":  1.5373282000073232,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  67,
+                                      "user_id":  3,
+                                      "user_sequence":  15,
+                                      "scheduled_at_seconds":  97.27826409876178,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  97.27880570001435,
+                                      "completed_at_seconds":  99.65019819996087,
+                                      "latency_seconds":  2.37034629995469,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  1.9341835000086576,
+                                                     "mean_tpot_seconds":  0.09995986666763201,
+                                                     "max_tpot_seconds":  0.13402599998516962,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  68,
+                                      "user_id":  0,
+                                      "user_sequence":  14,
+                                      "scheduled_at_seconds":  100.29710383446069,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  100.29759909998393,
+                                      "completed_at_seconds":  106.93404329998884,
+                                      "latency_seconds":  6.636312899994664,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  5.525760599994101,
+                                                     "mean_tpot_seconds":  0.12763821429273645,
+                                                     "max_tpot_seconds":  0.16335019998950884,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  69,
+                                      "user_id":  0,
+                                      "user_sequence":  15,
+                                      "scheduled_at_seconds":  100.70406338124145,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  100.70435650000582,
+                                      "completed_at_seconds":  102.89910749997944,
+                                      "latency_seconds":  2.1944801000063308,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  1.6021364000043832,
+                                                     "mean_tpot_seconds":  0.06979397142172925,
+                                                     "max_tpot_seconds":  0.09842210001079366,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  70,
+                                      "user_id":  1,
+                                      "user_sequence":  10,
+                                      "scheduled_at_seconds":  100.96401439023067,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  100.96419159998186,
+                                      "completed_at_seconds":  121.55341519997455,
+                                      "latency_seconds":  20.5890747999656,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  11.180584299960174,
+                                                     "mean_tpot_seconds":  1.301887114291146,
+                                                     "max_tpot_seconds":  6.830690300033893,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  71,
+                                      "user_id":  2,
+                                      "user_sequence":  15,
+                                      "scheduled_at_seconds":  101.62712078202885,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  101.62761109997518,
+                                      "completed_at_seconds":  164.1918127000099,
+                                      "latency_seconds":  62.564038300013635,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  58.836289699946065,
+                                                     "mean_tpot_seconds":  0.9708866000097865,
+                                                     "max_tpot_seconds":  1.8199712000205182,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  72,
+                                      "user_id":  3,
+                                      "user_sequence":  16,
+                                      "scheduled_at_seconds":  102.19729719477117,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  102.19784229999641,
+                                      "completed_at_seconds":  168.1690206999774,
+                                      "latency_seconds":  65.97035519999918,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  58.90780330001144,
+                                                     "mean_tpot_seconds":  0.4470775066642091,
+                                                     "max_tpot_seconds":  1.1954204000066966,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  73,
+                                      "user_id":  4,
+                                      "user_sequence":  13,
+                                      "scheduled_at_seconds":  102.47103991948431,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  102.4716727999621,
+                                      "completed_at_seconds":  119.91776290000416,
+                                      "latency_seconds":  17.44498010003008,
+                                      "text":  "I\u0027m sorry,",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  10.874591600033455,
+                                                     "mean_tpot_seconds":  2.076564266656836,
+                                                     "max_tpot_seconds":  5.662468899972737,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  74,
+                                      "user_id":  0,
+                                      "user_sequence":  16,
+                                      "scheduled_at_seconds":  106.51494285726122,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  106.5154972000164,
+                                      "completed_at_seconds":  121.55439890001435,
+                                      "latency_seconds":  15.038779900001828,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  12.433468799979892,
+                                                     "mean_tpot_seconds":  0.3385863000044732,
+                                                     "max_tpot_seconds":  1.0601413999684155,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  75,
+                                      "user_id":  4,
+                                      "user_sequence":  14,
+                                      "scheduled_at_seconds":  106.81504538283798,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  106.815424099972,
+                                      "completed_at_seconds":  116.60701939999126,
+                                      "latency_seconds":  9.790557999978773,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  8.536197300010826,
+                                                     "mean_tpot_seconds":  0.16122624285552384,
+                                                     "max_tpot_seconds":  0.25727020000340417,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  76,
+                                      "user_id":  0,
+                                      "user_sequence":  17,
+                                      "scheduled_at_seconds":  106.84699753160382,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  106.8472454000148,
+                                      "completed_at_seconds":  116.49493469996378,
+                                      "latency_seconds":  9.647510799986776,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  1.7311835999717005,
+                                                     "mean_tpot_seconds":  1.1057240285694465,
+                                                     "max_tpot_seconds":  6.769767199992202,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  77,
+                                      "user_id":  1,
+                                      "user_sequence":  11,
+                                      "scheduled_at_seconds":  109.32912925034499,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  109.32957210001769,
+                                      "completed_at_seconds":  143.4517389999819,
+                                      "latency_seconds":  34.12198019999778,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  32.42288450000342,
+                                                     "mean_tpot_seconds":  0.20839001427936768,
+                                                     "max_tpot_seconds":  0.22465450002346188,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  78,
+                                      "user_id":  0,
+                                      "user_sequence":  18,
+                                      "scheduled_at_seconds":  109.82190793157842,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  109.82223059999524,
+                                      "completed_at_seconds":  139.8825961999828,
+                                      "latency_seconds":  30.05971080000745,
+                                      "text":  "I don\u0027t have the ability to access",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874,
+                                                        309,
+                                                        4819,
+                                                        364,
+                                                        2840
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  28.391275300004054,
+                                                     "mean_tpot_seconds":  0.20616159999709843,
+                                                     "max_tpot_seconds":  0.2199296999606304,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  79,
+                                      "user_id":  2,
+                                      "user_sequence":  16,
+                                      "scheduled_at_seconds":  110.95872959036161,
+                                      "size_class":  "medium",
+                                      "prompt_words":  96,
+                                      "max_new_tokens":  4,
+                                      "submitted_at_seconds":  110.95917589997407,
+                                      "completed_at_seconds":  135.39802600000985,
+                                      "latency_seconds":  24.437990200007334,
+                                      "text":  "I don\u0027t have",
+                                      "token_ids":  [
+                                                        76,
+                                                        2207,
+                                                        1445,
+                                                        874
+                                                    ],
+                                      "generated_steps":  4,
+                                      "timing":  {
+                                                     "ttft_seconds":  21.232140699983574,
+                                                     "mean_tpot_seconds":  0.8840176666659924,
+                                                     "max_tpot_seconds":  1.9093119999743067,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  80,
+                                      "user_id":  0,
+                                      "user_sequence":  19,
+                                      "scheduled_at_seconds":  115.46692053615975,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  115.46748270001262,
+                                      "completed_at_seconds":  136.25891269999556,
+                                      "latency_seconds":  20.790628199989442,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  17.540353599993978,
+                                                     "mean_tpot_seconds":  0.421206985716708,
+                                                     "max_tpot_seconds":  1.1216370000038296,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  81,
+                                      "user_id":  3,
+                                      "user_sequence":  17,
+                                      "scheduled_at_seconds":  116.97438328512604,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  8,
+                                      "submitted_at_seconds":  116.97475250001298,
+                                      "completed_at_seconds":  136.2809305000119,
+                                      "latency_seconds":  19.30570710002212,
+                                      "text":  "I\u0027m sorry, but the text you",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401
+                                                    ],
+                                      "generated_steps":  8,
+                                      "timing":  {
+                                                     "ttft_seconds":  16.81757709995145,
+                                                     "mean_tpot_seconds":  0.3133771714305372,
+                                                     "max_tpot_seconds":  0.3866199000040069,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  82,
+                                      "user_id":  1,
+                                      "user_sequence":  12,
+                                      "scheduled_at_seconds":  118.1718982908236,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  118.17260859999806,
+                                      "completed_at_seconds":  168.18868249998195,
+                                      "latency_seconds":  50.01550199999474,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  43.67981729999883,
+                                                     "mean_tpot_seconds":  0.40337839333418135,
+                                                     "max_tpot_seconds":  0.7449455999885686,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  },
+                                  {
+                                      "id":  83,
+                                      "user_id":  3,
+                                      "user_sequence":  18,
+                                      "scheduled_at_seconds":  119.87077327779969,
+                                      "size_class":  "short",
+                                      "prompt_words":  24,
+                                      "max_new_tokens":  16,
+                                      "submitted_at_seconds":  119.87143589998595,
+                                      "completed_at_seconds":  122.53954809997231,
+                                      "latency_seconds":  2.6659101999830455,
+                                      "text":  "I\u0027m sorry, but the text you\u0027ve provided seems to be a mix of",
+                                      "token_ids":  [
+                                                        76,
+                                                        1422,
+                                                        5718,
+                                                        47,
+                                                        1362,
+                                                        309,
+                                                        1851,
+                                                        401,
+                                                        3370,
+                                                        3509,
+                                                        2128,
+                                                        364,
+                                                        600,
+                                                        299,
+                                                        5418,
+                                                        354
+                                                    ],
+                                      "generated_steps":  16,
+                                      "timing":  {
+                                                     "ttft_seconds":  1.079050600004848,
+                                                     "mean_tpot_seconds":  0.09908081999747083,
+                                                     "max_tpot_seconds":  0.22642139997333288,
+                                                     "prefill_chunk_size":  0
+                                                 }
+                                  }
+                              ]
+             },
+    "cloud_workers":  [
+                          {
+                              "wall_seconds":  169.2558040000149,
+                              "busy_seconds":  81.8158230005647,
+                              "busy_ratio":  0.48338562735820567,
+                              "jobs_completed":  108,
+                              "prefill_jobs":  12,
+                              "decode_jobs":  96,
+                              "forward_batches":  108,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  1491.0780898159526,
+                              "prefill_average_queue_wait_ms":  8142.441033337187,
+                              "decode_average_queue_wait_ms":  659.6577218757981,
+                              "prefill_busy_seconds":  75.70227459998569,
+                              "decode_busy_seconds":  6.11354840057902,
+                              "network_bytes":  {
+                                                    "prefill":  94519296,
+                                                    "decode":  589824
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.1356154368,
+                                                                      "decode":  0.4804718592000004
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.73926860000938,
+                              "busy_seconds":  15.360934699652717,
+                              "busy_ratio":  0.09049723629863612,
+                              "jobs_completed":  61,
+                              "prefill_jobs":  9,
+                              "decode_jobs":  52,
+                              "forward_batches":  61,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  159.42025082433963,
+                              "prefill_average_queue_wait_ms":  202.22993333461798,
+                              "decode_average_queue_wait_ms":  152.0108826975607,
+                              "prefill_busy_seconds":  12.90652499999851,
+                              "decode_busy_seconds":  2.4544096996542066,
+                              "network_bytes":  {
+                                                    "prefill":  24883200,
+                                                    "decode":  319488
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.06490656,
+                                                                      "decode":  0.26025559039999974
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.741817000031,
+                              "busy_seconds":  108.35252939997008,
+                              "busy_ratio":  0.6383372778432688,
+                              "jobs_completed":  157,
+                              "prefill_jobs":  13,
+                              "decode_jobs":  144,
+                              "forward_batches":  157,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  4867.805533758795,
+                              "prefill_average_queue_wait_ms":  39312.682730772605,
+                              "decode_average_queue_wait_ms":  1758.1985645839368,
+                              "prefill_busy_seconds":  101.19693840009859,
+                              "decode_busy_seconds":  7.155590999871492,
+                              "network_bytes":  {
+                                                    "prefill":  113897472,
+                                                    "decode":  884736
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.1561179776,
+                                                                      "decode":  0.7207077888000011
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.74422619998222,
+                              "busy_seconds":  65.30582950048847,
+                              "busy_ratio":  0.38473078562064994,
+                              "jobs_completed":  54,
+                              "prefill_jobs":  6,
+                              "decode_jobs":  48,
+                              "forward_batches":  54,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  1371.9705481446538,
+                              "prefill_average_queue_wait_ms":  9839.758000006745,
+                              "decode_average_queue_wait_ms":  313.4971166618925,
+                              "prefill_busy_seconds":  62.50355930009391,
+                              "decode_busy_seconds":  2.8022702003945597,
+                              "network_bytes":  {
+                                                    "prefill":  64512000,
+                                                    "decode":  294912
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.08160959999999999,
+                                                                      "decode":  0.24023592959999973
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.7454334999784,
+                              "busy_seconds":  33.27964950009482,
+                              "busy_ratio":  0.19605622851762347,
+                              "jobs_completed":  82,
+                              "prefill_jobs":  10,
+                              "decode_jobs":  72,
+                              "forward_batches":  82,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  621.82569999969,
+                              "prefill_average_queue_wait_ms":  1981.009200005792,
+                              "decode_average_queue_wait_ms":  433.05021388773133,
+                              "prefill_busy_seconds":  29.657148599799257,
+                              "decode_busy_seconds":  3.622500900295563,
+                              "network_bytes":  {
+                                                    "prefill":  44261376,
+                                                    "decode":  442368
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.0854091008,
+                                                                      "decode":  0.36035389440000004
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.74681439995766,
+                              "busy_seconds":  68.51637599995593,
+                              "busy_ratio":  0.4036386558543453,
+                              "jobs_completed":  116,
+                              "prefill_jobs":  12,
+                              "decode_jobs":  104,
+                              "forward_batches":  116,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  1625.8205362055692,
+                              "prefill_average_queue_wait_ms":  10232.693308328939,
+                              "decode_average_queue_wait_ms":  632.7198317297958,
+                              "prefill_busy_seconds":  64.1750020000618,
+                              "decode_busy_seconds":  4.341373999894131,
+                              "network_bytes":  {
+                                                    "prefill":  71516160,
+                                                    "decode":  638976
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.117212928,
+                                                                      "decode":  0.5205111808000005
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.74844240001403,
+                              "busy_seconds":  69.98435289977351,
+                              "busy_ratio":  0.4122827397429346,
+                              "jobs_completed":  99,
+                              "prefill_jobs":  11,
+                              "decode_jobs":  88,
+                              "forward_batches":  99,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  1066.8843767736248,
+                              "prefill_average_queue_wait_ms":  7263.161318180872,
+                              "decode_average_queue_wait_ms":  292.349759097719,
+                              "prefill_busy_seconds":  65.82131420006044,
+                              "decode_busy_seconds":  4.16303869971307,
+                              "network_bytes":  {
+                                                    "prefill":  75141120,
+                                                    "decode":  540672
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.11511289599999999,
+                                                                      "decode":  0.4404325376000003
+                                                                  }
+                          },
+                          {
+                              "wall_seconds":  169.74917220004136,
+                              "busy_seconds":  53.375791799859144,
+                              "busy_ratio":  0.3144391875853056,
+                              "jobs_completed":  111,
+                              "prefill_jobs":  11,
+                              "decode_jobs":  100,
+                              "forward_batches":  111,
+                              "average_batch_size":  1.0,
+                              "max_observed_batch_size":  1,
+                              "configured_max_batch_size":  1,
+                              "batch_window_ms":  0.0,
+                              "scheduling_policy":  "fifo",
+                              "max_decode_burst":  4,
+                              "prefill_starvation_ms":  500.0,
+                              "average_queue_wait_ms":  609.560071173447,
+                              "prefill_average_queue_wait_ms":  4941.261936360123,
+                              "decode_average_queue_wait_ms":  133.07286600291263,
+                              "prefill_busy_seconds":  48.835865499975625,
+                              "decode_busy_seconds":  4.539926299883518,
+                              "network_bytes":  {
+                                                    "prefill":  69390336,
+                                                    "decode":  614400
+                                                },
+                              "simulated_network_delay_seconds":  {
+                                                                      "prefill":  0.1105122688,
+                                                                      "decode":  0.5004915200000004
+                                                                  }
+                          }
+                      ],
+    "memory_samples":  [
+                           {
+                               "at":  "2026-09-25T14:29:25.5075871+08:00",
+                               "free_ram_gb":  6.799,
+                               "python_working_set_gb":  3.653,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:29:30.8729938+08:00",
+                               "free_ram_gb":  5.022,
+                               "python_working_set_gb":  5.449,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:29:36.4044672+08:00",
+                               "free_ram_gb":  6.205,
+                               "python_working_set_gb":  4.407,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:29:41.9585963+08:00",
+                               "free_ram_gb":  4.836,
+                               "python_working_set_gb":  5.668,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:29:47.5432233+08:00",
+                               "free_ram_gb":  4.791,
+                               "python_working_set_gb":  6.045,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:29:53.0623429+08:00",
+                               "free_ram_gb":  3.763,
+                               "python_working_set_gb":  6.557,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:29:58.6634054+08:00",
+                               "free_ram_gb":  3.508,
+                               "python_working_set_gb":  7.099,
+                               "pagefile_usage_gb":  4.017
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:04.1653718+08:00",
+                               "free_ram_gb":  4.84,
+                               "python_working_set_gb":  5.743,
+                               "pagefile_usage_gb":  4.016
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:09.7256158+08:00",
+                               "free_ram_gb":  2.384,
+                               "python_working_set_gb":  8.124,
+                               "pagefile_usage_gb":  4.016
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:15.2575437+08:00",
+                               "free_ram_gb":  4.461,
+                               "python_working_set_gb":  6.099,
+                               "pagefile_usage_gb":  4.016
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:20.7756630+08:00",
+                               "free_ram_gb":  5.103,
+                               "python_working_set_gb":  5.464,
+                               "pagefile_usage_gb":  3.999
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:26.3370396+08:00",
+                               "free_ram_gb":  3.632,
+                               "python_working_set_gb":  6.846,
+                               "pagefile_usage_gb":  3.998
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:31.8849322+08:00",
+                               "free_ram_gb":  3.566,
+                               "python_working_set_gb":  6.932,
+                               "pagefile_usage_gb":  3.998
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:37.3865850+08:00",
+                               "free_ram_gb":  4.979,
+                               "python_working_set_gb":  5.383,
+                               "pagefile_usage_gb":  3.998
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:42.9082554+08:00",
+                               "free_ram_gb":  3.409,
+                               "python_working_set_gb":  7.109,
+                               "pagefile_usage_gb":  3.991
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:48.4286840+08:00",
+                               "free_ram_gb":  3.044,
+                               "python_working_set_gb":  7.6,
+                               "pagefile_usage_gb":  3.991
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:53.8360219+08:00",
+                               "free_ram_gb":  3.159,
+                               "python_working_set_gb":  7.593,
+                               "pagefile_usage_gb":  3.973
+                           },
+                           {
+                               "at":  "2026-09-25T14:30:59.5823912+08:00",
+                               "free_ram_gb":  2.177,
+                               "python_working_set_gb":  8.643,
+                               "pagefile_usage_gb":  4.121
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:05.1023167+08:00",
+                               "free_ram_gb":  1.746,
+                               "python_working_set_gb":  9.118,
+                               "pagefile_usage_gb":  4.297
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:10.8377462+08:00",
+                               "free_ram_gb":  3.243,
+                               "python_working_set_gb":  7.7,
+                               "pagefile_usage_gb":  4.296
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:16.3086017+08:00",
+                               "free_ram_gb":  2.784,
+                               "python_working_set_gb":  7.399,
+                               "pagefile_usage_gb":  4.294
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:22.9337770+08:00",
+                               "free_ram_gb":  2.154,
+                               "python_working_set_gb":  8,
+                               "pagefile_usage_gb":  4.599
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:28.9815872+08:00",
+                               "free_ram_gb":  2.106,
+                               "python_working_set_gb":  8.425,
+                               "pagefile_usage_gb":  4.715
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:34.8724110+08:00",
+                               "free_ram_gb":  1.779,
+                               "python_working_set_gb":  8.603,
+                               "pagefile_usage_gb":  4.686
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:41.5438500+08:00",
+                               "free_ram_gb":  4.172,
+                               "python_working_set_gb":  6.891,
+                               "pagefile_usage_gb":  4.65
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:47.1255124+08:00",
+                               "free_ram_gb":  3.516,
+                               "python_working_set_gb":  7.34,
+                               "pagefile_usage_gb":  4.649
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:52.7214008+08:00",
+                               "free_ram_gb":  4.248,
+                               "python_working_set_gb":  6.649,
+                               "pagefile_usage_gb":  4.648
+                           },
+                           {
+                               "at":  "2026-09-25T14:31:58.2929576+08:00",
+                               "free_ram_gb":  4.961,
+                               "python_working_set_gb":  5.915,
+                               "pagefile_usage_gb":  4.619
+                           },
+                           {
+                               "at":  "2026-09-25T14:32:03.8017086+08:00",
+                               "free_ram_gb":  4.876,
+                               "python_working_set_gb":  5.955,
+                               "pagefile_usage_gb":  4.619
+                           },
+                           {
+                               "at":  "2026-09-25T14:32:09.4371784+08:00",
+                               "free_ram_gb":  4.901,
+                               "python_working_set_gb":  5.977,
+                               "pagefile_usage_gb":  4.618
+                           }
+                       ],
+    "memory_summary":  {
+                           "min_free_ram_gb":  1.746,
+                           "max_pagefile_usage_gb":  4.715,
+                           "max_python_working_set_gb":  9.118
+                       }
+}

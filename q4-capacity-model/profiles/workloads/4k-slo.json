@@ -1,0 +1,25 @@
+{
+  "input_tokens": 4096,
+  "output_tokens": 256,
+  "prefill_batch": 1,
+  "decode_batch": 8,
+  "batch_window_ms": 3.0,
+  "distance_km": 500.0,
+  "bandwidth_gbps": 10.0,
+  "enterprise_prefill_ms": 20.0,
+  "enterprise_decode_ms": 2.0,
+  "request_duration_seconds": 15.0,
+  "queue_model": "discrete_event",
+  "latency_percentile": 0.95,
+  "simulation_requests": 300,
+  "simulation_warmup_requests": 50,
+  "simulation_seed": 20260927,
+  "qps_search_iterations": 16,
+  "max_decode_burst": 4,
+  "prefill_starvation_ms": 500.0,
+  "max_utilization": 0.90,
+  "slo": {
+    "ttft_seconds": 3.0,
+    "tpot_seconds": 0.1
+  }
+}

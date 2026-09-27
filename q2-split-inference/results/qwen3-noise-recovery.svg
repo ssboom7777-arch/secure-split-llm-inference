@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Qwen3-1.7B 噪声强度与 Token 还原率</title>
+  <desc id="desc">噪声从0增加到32倍Embedding RMS时，余弦最近邻Token还原率从100%下降到0%；在0到1倍噪声区间还原率仍为100%。</desc>
+  <rect width="900" height="500" fill="#ffffff"/>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#202124">
+    <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="600">Qwen3-1.7B：噪声强度与 Token 还原率</text>
+    <text x="450" y="476" text-anchor="middle" font-size="14">噪声 σ / Embedding RMS</text>
+    <text x="18" y="250" text-anchor="middle" font-size="14" transform="rotate(-90 18 250)">余弦最近邻 Token 还原率</text>
+  </g>
+  <g stroke="#d9dde3" stroke-width="1">
+    <line x1="75" y1="60" x2="870" y2="60"/><line x1="75" y1="136" x2="870" y2="136"/>
+    <line x1="75" y1="212" x2="870" y2="212"/><line x1="75" y1="288" x2="870" y2="288"/>
+    <line x1="75" y1="364" x2="870" y2="364"/><line x1="75" y1="440" x2="870" y2="440"/>
+  </g>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#5f6368" text-anchor="end">
+    <text x="65" y="64">100%</text><text x="65" y="140">80%</text><text x="65" y="216">60%</text>
+    <text x="65" y="292">40%</text><text x="65" y="368">20%</text><text x="65" y="444">0%</text>
+  </g>
+  <line x1="75" y1="60" x2="75" y2="440" stroke="#5f6368"/><line x1="75" y1="440" x2="870" y2="440" stroke="#5f6368"/>
+  <polyline points="75,60 188.6,60 302.1,60 415.7,68.4 529.3,134.5 642.9,192.2 756.4,423.7 870,440" fill="none" stroke="#c43d4b" stroke-width="4"/>
+  <g fill="#c43d4b" stroke="#ffffff" stroke-width="2">
+    <circle cx="75" cy="60" r="6"/><circle cx="188.6" cy="60" r="6"/><circle cx="302.1" cy="60" r="6"/>
+    <circle cx="415.7" cy="68.4" r="6"/><circle cx="529.3" cy="134.5" r="6"/><circle cx="642.9" cy="192.2" r="6"/>
+    <circle cx="756.4" cy="423.7" r="6"/><circle cx="870" cy="440" r="6"/>
+  </g>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#202124" text-anchor="middle">
+    <text x="75" y="458">0</text><text x="188.6" y="458">0.5</text><text x="302.1" y="458">1</text>
+    <text x="415.7" y="458">2</text><text x="529.3" y="458">4</text><text x="642.9" y="458">8</text>
+    <text x="756.4" y="458">16</text><text x="870" y="458">32</text>
+  </g>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="12" fill="#202124" text-anchor="middle">
+    <text x="75" y="50">100%</text><text x="188.6" y="50">100%</text><text x="302.1" y="50">100%</text>
+    <text x="415.7" y="58">97.8%</text><text x="529.3" y="124">80.4%</text><text x="642.9" y="182">65.2%</text>
+    <text x="756.4" y="414">4.3%</text><text x="846" y="430">0%</text>
+  </g>
+  <line x1="75" y1="82" x2="302.1" y2="82" stroke="#f0a000" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="188" y="102" text-anchor="middle" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#7a5200">0～1倍噪声：攻击还原率没有下降</text>
+</svg>

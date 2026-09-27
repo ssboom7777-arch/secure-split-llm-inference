@@ -1,0 +1,12 @@
+{
+  "name": "Qwen3-32B BF16",
+  "hidden_size": 5120,
+  "intermediate_size": 25600,
+  "layers": 64,
+  "attention_heads": 64,
+  "kv_heads": 8,
+  "head_dim": 128,
+  "vocab_size": 151936,
+  "dtype_bytes": 2,
+  "parameter_count": 31244000000
+}

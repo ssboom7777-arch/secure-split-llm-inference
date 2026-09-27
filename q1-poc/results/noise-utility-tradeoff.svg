@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img">
+<title>MiniMind Gaussian-noise privacy and utility trade-off</title>
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#222}.axis{stroke:#555;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.attack{stroke:#d1495b;fill:none;stroke-width:3}.utility{stroke:#0077b6;fill:none;stroke-width:3}.dot-a{fill:#d1495b}.dot-u{fill:#0077b6}</style>
+<text x="450" y="25" text-anchor="middle" font-size="18" font-weight="600">MiniMind noise: privacy gain versus generation utility</text>
+<line class="grid" x1="80" y1="445.0" x2="865" y2="445.0"/>
+<text x="68" y="450.0" text-anchor="end" font-size="13">0%</text>
+<line class="grid" x1="80" y1="365.0" x2="865" y2="365.0"/>
+<text x="68" y="370.0" text-anchor="end" font-size="13">20%</text>
+<line class="grid" x1="80" y1="285.0" x2="865" y2="285.0"/>
+<text x="68" y="290.0" text-anchor="end" font-size="13">40%</text>
+<line class="grid" x1="80" y1="205.0" x2="865" y2="205.0"/>
+<text x="68" y="210.0" text-anchor="end" font-size="13">60%</text>
+<line class="grid" x1="80" y1="125.0" x2="865" y2="125.0"/>
+<text x="68" y="130.0" text-anchor="end" font-size="13">80%</text>
+<line class="grid" x1="80" y1="45.0" x2="865" y2="45.0"/>
+<text x="68" y="50.0" text-anchor="end" font-size="13">100%</text>
+<line class="axis" x1="80" y1="45" x2="80" y2="445"/>
+<line class="axis" x1="80" y1="445" x2="865" y2="445"/>
+<polyline class="attack" points="80.0,45.0 192.1,45.0 304.3,45.0 416.4,45.0 528.6,48.9 640.7,319.4 752.9,432.1 865.0,445.0"/>
+<polyline class="utility" points="80.0,45.0 192.1,441.2 304.3,445.0 416.4,445.0 528.6,445.0 640.7,445.0 752.9,445.0 865.0,443.8"/>
+<circle class="dot-a" cx="80.0" cy="45.0" r="5"/>
+<circle class="dot-u" cx="80.0" cy="45.0" r="5"/>
+<text x="80.0" y="470" text-anchor="middle" font-size="13">0</text>
+<circle class="dot-a" cx="192.1" cy="45.0" r="5"/>
+<circle class="dot-u" cx="192.1" cy="441.2" r="5"/>
+<text x="192.1" y="470" text-anchor="middle" font-size="13">0.5</text>
+<circle class="dot-a" cx="304.3" cy="45.0" r="5"/>
+<circle class="dot-u" cx="304.3" cy="445.0" r="5"/>
+<text x="304.3" y="470" text-anchor="middle" font-size="13">1</text>
+<circle class="dot-a" cx="416.4" cy="45.0" r="5"/>
+<circle class="dot-u" cx="416.4" cy="445.0" r="5"/>
+<text x="416.4" y="470" text-anchor="middle" font-size="13">2</text>
+<circle class="dot-a" cx="528.6" cy="48.9" r="5"/>
+<circle class="dot-u" cx="528.6" cy="445.0" r="5"/>
+<text x="528.6" y="470" text-anchor="middle" font-size="13">4</text>
+<circle class="dot-a" cx="640.7" cy="319.4" r="5"/>
+<circle class="dot-u" cx="640.7" cy="445.0" r="5"/>
+<text x="640.7" y="470" text-anchor="middle" font-size="13">8</text>
+<circle class="dot-a" cx="752.9" cy="432.1" r="5"/>
+<circle class="dot-u" cx="752.9" cy="445.0" r="5"/>
+<text x="752.9" y="470" text-anchor="middle" font-size="13">16</text>
+<circle class="dot-a" cx="865.0" cy="445.0" r="5"/>
+<circle class="dot-u" cx="865.0" cy="443.8" r="5"/>
+<text x="865.0" y="470" text-anchor="middle" font-size="13">32</text>
+<text x="472.5" y="502" text-anchor="middle" font-size="14">Noise sigma / embedding RMS</text>
+<text x="18" y="245.0" text-anchor="middle" font-size="14" transform="rotate(-90 18 245.0)">Rate</text>
+<line class="attack" x1="560" y1="48" x2="600" y2="48"/><text x="610" y="53" font-size="13">Attack token recovery</text>
+<line class="utility" x1="560" y1="72" x2="600" y2="72"/><text x="610" y="77" font-size="13">Output token agreement</text>
+</svg>

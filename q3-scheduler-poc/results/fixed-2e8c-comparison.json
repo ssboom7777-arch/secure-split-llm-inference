@@ -1,0 +1,131 @@
+{
+  "status": "calibrated local simulation, not 8-GPU hardware measurement",
+  "fixed_physical_configuration": {
+    "enterprise_cards": 2,
+    "cloud_cards": 8
+  },
+  "workload": {
+    "duration_seconds": 300.0,
+    "users": 5,
+    "mean_user_interval_seconds": 8.0,
+    "arrival": "per-user exponential",
+    "prompt_mix": {
+      "short_24_words": 0.6,
+      "medium_96_words": 0.3,
+      "long_384_words": 0.1
+    },
+    "max_new_tokens_mix": {
+      "4": 0.3,
+      "8": 0.5,
+      "16": 0.2
+    },
+    "seed": 20260925
+  },
+  "calibration": {
+    "source": "real MiniMind 5-user sustained execution on this laptop",
+    "prefill_busy_seconds": 340.0542132999981,
+    "decode_busy_seconds": 66.4525207998231,
+    "request_count": 194,
+    "cloud_internal_kv_bandwidth_gbps": 100.0,
+    "pd_scaling_assumption": "ideal inverse scaling with assigned card count"
+  },
+  "cost_formula": "8 cloud cards * wall time; card-hour price cancels in relative comparison",
+  "results": [
+    {
+      "name": "serial-unified-8c",
+      "enterprise_cards": 2,
+      "cloud_cards": 8,
+      "cloud_layout": "8-card unified pool; one request admitted end-to-end at a time",
+      "wall_seconds": 423.68259462724046,
+      "throughput_requests_per_second": 0.4578899451148869,
+      "ttft_p95_seconds": 112.7699884668973,
+      "tpot_p95_seconds": 0.04484455596730186,
+      "latency_p95_seconds": 113.10071466530874,
+      "cloud_utilization": 0.9594605472464051,
+      "cloud_card_seconds": 3389.4607570179237,
+      "kv_transfer_gib": 0.0,
+      "kv_transfer_serialized_seconds": 0.0,
+      "relative_cost": 1.0,
+      "cost_reduction_vs_serial": 0.0
+    },
+    {
+      "name": "pipeline-unified-8c",
+      "workers": {
+        "u": 1
+      },
+      "wall_seconds": 414.5028767286508,
+      "throughput_requests_per_second": 0.46803052739004203,
+      "ttft_p95_seconds": 77.24566073118979,
+      "tpot_p95_seconds": 61.65298445721396,
+      "latency_p95_seconds": 306.93452509523945,
+      "prefill_queue_wait_mean_seconds": 38.00632734911635,
+      "decode_queue_wait_mean_seconds": 142.39002082523854,
+      "pool_busy_ratio": {
+        "u": 0.9807090780842861
+      },
+      "cloud_card_seconds": 3316.0230138292063,
+      "kv_transfer_gib": 0.0,
+      "kv_transfer_serialized_seconds": 0.0,
+      "cloud_utilization": 0.9807090780842861,
+      "enterprise_cards": 2,
+      "cloud_cards": 8,
+      "cloud_layout": "8-card unified pool; request-level pipeline",
+      "relative_cost": 0.9783335024497146,
+      "cost_reduction_vs_serial": 0.02166649755028538
+    },
+    {
+      "name": "pipeline-separated-6P2D",
+      "workers": {
+        "p": 1,
+        "d": 1
+      },
+      "wall_seconds": 459.552397557,
+      "throughput_requests_per_second": 0.42214990288661797,
+      "ttft_p95_seconds": 143.12355533142608,
+      "tpot_p95_seconds": 3.187171261382673,
+      "latency_p95_seconds": 160.3306015088808,
+      "prefill_queue_wait_mean_seconds": 76.19353741775461,
+      "decode_queue_wait_mean_seconds": 8.042373548853435,
+      "pool_busy_ratio": {
+        "p": 0.9866244200740822,
+        "d": 0.5784108289117001
+      },
+      "cloud_card_seconds": 3676.419180456,
+      "kv_transfer_gib": 5.351142883300781,
+      "kv_transfer_serialized_seconds": 0.479059673599999,
+      "cloud_utilization": 0.8845710222834867,
+      "enterprise_cards": 2,
+      "cloud_cards": 8,
+      "cloud_layout": "6 Prefill cards + 2 Decode cards",
+      "relative_cost": 1.0846619695607702,
+      "cost_reduction_vs_serial": -0.08466196956077021
+    },
+    {
+      "name": "pipeline-separated-5P3D",
+      "workers": {
+        "p": 1,
+        "d": 1
+      },
+      "wall_seconds": 547.4223293222268,
+      "throughput_requests_per_second": 0.3543881745565527,
+      "ttft_p95_seconds": 219.33720609503547,
+      "tpot_p95_seconds": 1.2748685045528418,
+      "latency_p95_seconds": 221.02336863251986,
+      "prefill_queue_wait_mean_seconds": 119.92327798078317,
+      "decode_queue_wait_mean_seconds": 2.535485513415867,
+      "pool_busy_ratio": {
+        "p": 0.9939067373332029,
+        "d": 0.3237111689474954
+      },
+      "cloud_card_seconds": 4379.378634577814,
+      "kv_transfer_gib": 5.351142883300781,
+      "kv_transfer_serialized_seconds": 0.479059673599999,
+      "cloud_utilization": 0.7425833991885626,
+      "enterprise_cards": 2,
+      "cloud_cards": 8,
+      "cloud_layout": "5 Prefill cards + 3 Decode cards",
+      "relative_cost": 1.2920576305567937,
+      "cost_reduction_vs_serial": -0.2920576305567937
+    }
+  ]
+}

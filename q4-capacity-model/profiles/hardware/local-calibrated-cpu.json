@@ -1,0 +1,10 @@
+{
+  "name": "Local CPU generated from Q2/Q3 calibration",
+  "devices": 1,
+  "peak_tflops": 0.05011872336272715,
+  "memory_bandwidth_gbps": 3.981071705534969,
+  "memory_gb": 32.0,
+  "compute_efficiency": 1.0,
+  "bandwidth_efficiency": 1.0,
+  "tensor_parallel_efficiency": 1.0
+}

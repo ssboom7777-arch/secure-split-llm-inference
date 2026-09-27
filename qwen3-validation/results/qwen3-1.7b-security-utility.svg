@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="480">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Segoe UI,Arial}.g{stroke:#ddd}.a{stroke:#d1495b;fill:none;stroke-width:3}.u{stroke:#087e8b;fill:none;stroke-width:3}</style>
+<text x="410" y="25" text-anchor="middle" font-size="18">Qwen3-1.7B: privacy–utility trade-off</text>
+<line class="g" x1="70" y1="410.0" x2="790" y2="410.0"/>
+<text x="62" y="415.0" text-anchor="end">0%</text>
+<line class="g" x1="70" y1="337.0" x2="790" y2="337.0"/>
+<text x="62" y="342.0" text-anchor="end">20%</text>
+<line class="g" x1="70" y1="264.0" x2="790" y2="264.0"/>
+<text x="62" y="269.0" text-anchor="end">40%</text>
+<line class="g" x1="70" y1="191.0" x2="790" y2="191.0"/>
+<text x="62" y="196.0" text-anchor="end">60%</text>
+<line class="g" x1="70" y1="117.99999999999999" x2="790" y2="117.99999999999999"/>
+<text x="62" y="122.99999999999999" text-anchor="end">80%</text>
+<line class="g" x1="70" y1="45.0" x2="790" y2="45.0"/>
+<text x="62" y="50.0" text-anchor="end">100%</text>
+<polyline class="a" points="70.0,45.0 172.9,45.0 275.7,45.0 378.6,52.9 481.4,116.4 584.3,172.0 687.1,394.1 790.0,410.0"/>
+<polyline class="u" points="70.0,45.0 172.9,75.4 275.7,288.3 378.6,349.2 481.4,379.6 584.3,318.8 687.1,349.2 790.0,349.2"/>
+<text x="70.0" y="435" text-anchor="middle">0</text>
+<text x="172.85714285714286" y="435" text-anchor="middle">0.5</text>
+<text x="275.7142857142857" y="435" text-anchor="middle">1</text>
+<text x="378.57142857142856" y="435" text-anchor="middle">2</text>
+<text x="481.42857142857144" y="435" text-anchor="middle">4</text>
+<text x="584.2857142857143" y="435" text-anchor="middle">8</text>
+<text x="687.1428571428571" y="435" text-anchor="middle">16</text>
+<text x="790.0" y="435" text-anchor="middle">32</text>
+<text x="430.0" y="465" text-anchor="middle">Noise sigma / embedding RMS</text>
+<text x="560" y="48" fill="#d1495b">Attack recovery</text><text x="680" y="48" fill="#087e8b">Output agreement</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    "E:\\vscode_workspace\\AIOSforLearning\\interview-challenge\\q4-capacity-model\\results\\open-loop-validation\\qps-0.10.json",
+    "E:\\vscode_workspace\\AIOSforLearning\\interview-challenge\\q4-capacity-model\\results\\open-loop-validation\\qps-0.13.json"
+  ],
+  "fitted_effective_compute_gflops": 50.11872336272715,
+  "fitted_effective_memory_bandwidth_gbps": 3.981071705534969,
+  "predicted_cloud_busy_seconds_before_correction": 104.34229811825762,
+  "measured_cloud_busy_seconds": 54.31808299862314,
+  "cloud_service_time_multiplier": 0.5205758736218468,
+  "enterprise_prefill_boundary_ms": 120.22017987487278,
+  "enterprise_decode_boundary_ms": 52.87503471221215,
+  "method": "mean low-load costs calibrate fixed terms; higher-rate P95 points validate capacity"
+}

@@ -1,0 +1,96 @@
+{
+  "model": "jingyaogong/minimind-3",
+  "attack": "cosine nearest-neighbor over the known embedding table",
+  "prompts": [
+    {
+      "prompt": "机密项目代号青鸟，预算为一千万元，请勿外传。",
+      "token_count": 66,
+      "token_recovery_rate": 1.0,
+      "recovered_text": "机密项目代号青鸟，预算为一千万元，请勿外传。"
+    },
+    {
+      "prompt": "客户张三的身份证号和账户余额属于敏感信息。",
+      "token_count": 63,
+      "token_recovery_rate": 1.0,
+      "recovered_text": "客户张三的身份证号和账户余额属于敏感信息。"
+    },
+    {
+      "prompt": "The acquisition price is confidential until the board approves it.",
+      "token_count": 66,
+      "token_recovery_rate": 1.0,
+      "recovered_text": "The acquisition price is confidential until the board approves it."
+    },
+    {
+      "prompt": "服务器地址为10.24.7.9，访问密钥不得写入日志。",
+      "token_count": 63,
+      "token_recovery_rate": 1.0,
+      "recovered_text": "服务器地址为10.24.7.9，访问密钥不得写入日志。"
+    },
+    {
+      "prompt": "请总结这份尚未公开的季度财务报告。",
+      "token_count": 51,
+      "token_recovery_rate": 1.0,
+      "recovered_text": "请总结这份尚未公开的季度财务报告。"
+    }
+  ],
+  "token_count": 309,
+  "hidden_size": 768,
+  "vocab_size": 6400,
+  "baseline": {
+    "token_recovery_rate": 1.0,
+    "exact_sequence_recovered": true
+  },
+  "gaussian_noise_tradeoff": [
+    {
+      "noise_sigma_over_embedding_rms": 0.0,
+      "token_recovery_rate": 1.0,
+      "mean_clean_noisy_cosine": 1.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 0.5,
+      "token_recovery_rate": 1.0,
+      "mean_clean_noisy_cosine": 0.8827707171440125
+    },
+    {
+      "noise_sigma_over_embedding_rms": 1.0,
+      "token_recovery_rate": 1.0,
+      "mean_clean_noisy_cosine": 0.6851033568382263
+    },
+    {
+      "noise_sigma_over_embedding_rms": 2.0,
+      "token_recovery_rate": 1.0,
+      "mean_clean_noisy_cosine": 0.4264010190963745
+    },
+    {
+      "noise_sigma_over_embedding_rms": 4.0,
+      "token_recovery_rate": 0.9902912621359223,
+      "mean_clean_noisy_cosine": 0.2252936214208603
+    },
+    {
+      "noise_sigma_over_embedding_rms": 8.0,
+      "token_recovery_rate": 0.313915857605178,
+      "mean_clean_noisy_cosine": 0.11591581255197525
+    },
+    {
+      "noise_sigma_over_embedding_rms": 16.0,
+      "token_recovery_rate": 0.032362459546925564,
+      "mean_clean_noisy_cosine": 0.05675344914197922
+    },
+    {
+      "noise_sigma_over_embedding_rms": 32.0,
+      "token_recovery_rate": 0.0,
+      "mean_clean_noisy_cosine": 0.027197983115911484
+    }
+  ],
+  "two_party_additive_secret_sharing": {
+    "single_cloud_token_recovery_rate": 0.0,
+    "combined_shares_token_recovery_rate": 1.0,
+    "quantization_scale": 8192.0
+  },
+  "elapsed_seconds": 7.2536158000002615,
+  "limitations": [
+    "ByteLevel base tokens are used without BPE merges; they decode losslessly to the prompt.",
+    "Cosine similarity is a representation-distortion proxy, not an end-task accuracy metric.",
+    "Secret sharing needs an MPC-capable cloud computation protocol; ordinary Transformer layers cannot consume one share alone."
+  ]
+}

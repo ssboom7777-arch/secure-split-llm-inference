@@ -1,0 +1,55 @@
+{
+  "model": "MiniMind-3 63.9M",
+  "hardware": "Local CPU generated from Q2/Q3 calibration",
+  "workload": {
+    "input_tokens": 27,
+    "output_tokens": 60.5,
+    "prefill_batch": 1,
+    "decode_batch": 1,
+    "batch_window_ms": 0.0,
+    "distance_km": 500.0,
+    "bandwidth_gbps": 10.0,
+    "enterprise_prefill_boundary_ms": 120.22017987487278,
+    "enterprise_decode_boundary_ms": 52.87503471221215,
+    "cloud_service_time_multiplier": 0.5205758736218468,
+    "cloud_batch_fixed_overhead_ms": 0.0,
+    "max_decode_burst": 4,
+    "prefill_starvation_ms": 500.0,
+    "queue_model": "discrete_event",
+    "latency_percentile": 0.95,
+    "simulation_requests": 300,
+    "simulation_warmup_requests": 50,
+    "simulation_seed": 20260927,
+    "qps_search_iterations": 16,
+    "max_utilization": 0.9,
+    "slo": {
+      "ttft_seconds": 3.0,
+      "tpot_seconds": 0.1
+    },
+    "calibration_note": "Generated from Q2 fitted Roofline rates and Q3 low-load open-loop measurements; P95 values are held out and are not folded into fixed service costs."
+  },
+  "prediction": {
+    "qps": 0.10797909545898435,
+    "ttft_seconds": 0.1796495304047312,
+    "tpot_seconds": 0.0997535627444272,
+    "utilization": 0.2106674753495121,
+    "simulated_completed_qps": 0.11398163713374491,
+    "mean_request_duration_seconds": 5.506816450220046,
+    "weights_gb": 0.23594,
+    "estimated_kv_cache_gb": 0.0012713664220286279,
+    "memory_ok": true,
+    "simulation_requests": 300,
+    "simulation_warmup_requests": 50,
+    "latency_percentile": 0.95,
+    "queue_model": "token-level discrete event, decode-first",
+    "limiting_constraint": "tpot_limit",
+    "constraint_ratios": {
+      "resource_limit": 0.234074972610569,
+      "ttft_limit": 0.059883176801577065,
+      "tpot_limit": 0.997535627444272,
+      "memory_limit": 0.00823650577854266
+    },
+    "first_failing_qps": 0.10799433898925778
+  },
+  "classification": "token-level discrete-event prediction, not a measurement on the target GPU"
+}

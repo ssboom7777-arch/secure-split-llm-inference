@@ -1,0 +1,136 @@
+{
+  "environment": {
+    "torch_version": "2.6.0+cpu",
+    "device": "cpu",
+    "threads": 12,
+    "weights": "E:\\vscode_workspace\\AIOSforLearning\\interview-challenge\\q1-poc\\assets\\model.safetensors"
+  },
+  "observations": [
+    {
+      "phase": "prefill",
+      "batch": 1,
+      "input_tokens": 8,
+      "context_tokens": 8,
+      "seconds": 0.038593599922023714
+    },
+    {
+      "phase": "decode",
+      "batch": 1,
+      "input_tokens": 1,
+      "context_tokens": 8,
+      "seconds": 0.06914629996754229
+    },
+    {
+      "phase": "prefill",
+      "batch": 2,
+      "input_tokens": 8,
+      "context_tokens": 8,
+      "seconds": 0.07362809998448938
+    },
+    {
+      "phase": "decode",
+      "batch": 2,
+      "input_tokens": 1,
+      "context_tokens": 8,
+      "seconds": 0.05272759997751564
+    },
+    {
+      "phase": "prefill",
+      "batch": 4,
+      "input_tokens": 8,
+      "context_tokens": 8,
+      "seconds": 0.07187870005145669
+    },
+    {
+      "phase": "decode",
+      "batch": 4,
+      "input_tokens": 1,
+      "context_tokens": 8,
+      "seconds": 0.054233300033956766
+    },
+    {
+      "phase": "prefill",
+      "batch": 8,
+      "input_tokens": 8,
+      "context_tokens": 8,
+      "seconds": 0.1697097000433132
+    },
+    {
+      "phase": "decode",
+      "batch": 8,
+      "input_tokens": 1,
+      "context_tokens": 8,
+      "seconds": 0.09835190000012517
+    },
+    {
+      "phase": "prefill",
+      "batch": 1,
+      "input_tokens": 32,
+      "context_tokens": 32,
+      "seconds": 0.08050249994266778
+    },
+    {
+      "phase": "decode",
+      "batch": 1,
+      "input_tokens": 1,
+      "context_tokens": 32,
+      "seconds": 0.04656110005453229
+    },
+    {
+      "phase": "prefill",
+      "batch": 2,
+      "input_tokens": 32,
+      "context_tokens": 32,
+      "seconds": 0.200443199952133
+    },
+    {
+      "phase": "decode",
+      "batch": 2,
+      "input_tokens": 1,
+      "context_tokens": 32,
+      "seconds": 0.06712299992796034
+    },
+    {
+      "phase": "prefill",
+      "batch": 4,
+      "input_tokens": 32,
+      "context_tokens": 32,
+      "seconds": 0.27842679992318153
+    },
+    {
+      "phase": "decode",
+      "batch": 4,
+      "input_tokens": 1,
+      "context_tokens": 32,
+      "seconds": 0.06609989993739873
+    },
+    {
+      "phase": "prefill",
+      "batch": 1,
+      "input_tokens": 64,
+      "context_tokens": 64,
+      "seconds": 0.1629131999798119
+    },
+    {
+      "phase": "decode",
+      "batch": 1,
+      "input_tokens": 1,
+      "context_tokens": 64,
+      "seconds": 0.0719941999996081
+    },
+    {
+      "phase": "prefill",
+      "batch": 2,
+      "input_tokens": 64,
+      "context_tokens": 64,
+      "seconds": 0.2997553999302909
+    },
+    {
+      "phase": "decode",
+      "batch": 2,
+      "input_tokens": 1,
+      "context_tokens": 64,
+      "seconds": 0.09166589996311814
+    }
+  ]
+}

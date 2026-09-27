@@ -1,0 +1,100 @@
+{
+  "same_schedule": true,
+  "outputs_identical": true,
+  "request_count": 194,
+  "serial": {
+    "client": {
+      "scheduled_duration_seconds": 300.0,
+      "wall_seconds_including_drain": 499.73190770001383,
+      "request_count": 194,
+      "generated_steps": 1668,
+      "requests_per_second": 0.3882081512322745,
+      "generated_steps_per_second": 3.337789671419762,
+      "latency_mean_seconds": 88.69452721031249,
+      "latency_p50_seconds": 67.26929610001389,
+      "latency_p95_seconds": 173.0104462999734,
+      "latency_p99_seconds": 178.331834600016,
+      "ttft_p95_seconds": 172.57717380003305,
+      "tpot_p95_seconds": 0.09723115333278352,
+      "arrival_dispatch_lag_p95_seconds": 0.001343435625130951
+    },
+    "cloud": {
+      "wall_seconds": 499.74866559996735,
+      "busy_seconds": 406.5067340998212,
+      "busy_ratio": 0.813422350236382,
+      "jobs_completed": 1862,
+      "prefill_jobs": 194,
+      "decode_jobs": 1668,
+      "forward_batches": 1862,
+      "average_batch_size": 1.0,
+      "max_observed_batch_size": 1,
+      "configured_max_batch_size": 1,
+      "batch_window_ms": 0.0,
+      "scheduling_policy": "fifo",
+      "average_queue_wait_ms": 0.21013061197876737,
+      "prefill_average_queue_wait_ms": 0.2166510285982459,
+      "decode_average_queue_wait_ms": 0.209372242180099,
+      "prefill_busy_seconds": 340.0542132999981,
+      "decode_busy_seconds": 66.4525207998231,
+      "network_bytes": {
+        "prefill": 1436436480,
+        "decode": 10248192
+      },
+      "simulated_network_delay_seconds": {
+        "prefill": 2.1191491840000007,
+        "decode": 8.348198553599804
+      }
+    }
+  },
+  "optimized": {
+    "client": {
+      "scheduled_duration_seconds": 300.0,
+      "wall_seconds_including_drain": 457.8594607000123,
+      "request_count": 194,
+      "generated_steps": 1668,
+      "requests_per_second": 0.4237108035365202,
+      "generated_steps_per_second": 3.643039279891318,
+      "latency_mean_seconds": 87.13387838659716,
+      "latency_p50_seconds": 77.28126019996125,
+      "latency_p95_seconds": 188.83831409999402,
+      "latency_p99_seconds": 198.2650235000183,
+      "ttft_p95_seconds": 183.90374150004936,
+      "tpot_p95_seconds": 5.217377913331924,
+      "arrival_dispatch_lag_p95_seconds": 0.0011567461699542037
+    },
+    "cloud": {
+      "wall_seconds": 457.88230009999825,
+      "busy_seconds": 432.18065799976466,
+      "busy_ratio": 0.9438684524502902,
+      "jobs_completed": 1862,
+      "prefill_jobs": 194,
+      "decode_jobs": 1668,
+      "forward_batches": 829,
+      "average_batch_size": 2.2460796139927623,
+      "max_observed_batch_size": 5,
+      "configured_max_batch_size": 5,
+      "batch_window_ms": 3.0,
+      "scheduling_policy": "decode-first",
+      "average_queue_wait_ms": 8206.71442835738,
+      "prefill_average_queue_wait_ms": 71160.57612216184,
+      "decode_average_queue_wait_ms": 884.7425047374371,
+      "prefill_busy_seconds": 371.797121699783,
+      "decode_busy_seconds": 60.38353629998164,
+      "network_bytes": {
+        "prefill": 1436436480,
+        "decode": 10248192
+      },
+      "simulated_network_delay_seconds": {
+        "prefill": 2.1191491840000016,
+        "decode": 8.348198553599804
+      }
+    }
+  },
+  "changes": {
+    "throughput_speedup": 1.0914526194041805,
+    "p95_ttft_ratio": 1.0656318993445826,
+    "p95_tpot_ratio": 53.65952921976474,
+    "relative_cost_per_request": 0.9162101791884433
+  },
+  "cost_note": "Same fixed arrival trace and work; cost ratio uses instance wall time per completed request."
+}

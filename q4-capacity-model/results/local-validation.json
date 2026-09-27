@@ -1,0 +1,184 @@
+{
+  "fitted_effective_compute_gflops": 50.11872336272715,
+  "fitted_effective_memory_bandwidth_gbps": 3.981071705534969,
+  "training": {
+    "mape": 0.17997825832784123,
+    "details": [
+      {
+        "phase": "prefill",
+        "batch": 1,
+        "input_tokens": 8,
+        "context_tokens": 8,
+        "seconds": 0.038593599922023714,
+        "predicted_seconds": 0.059265448465037084,
+        "absolute_percentage_error": 0.5356289277180601
+      },
+      {
+        "phase": "decode",
+        "batch": 1,
+        "input_tokens": 1,
+        "context_tokens": 8,
+        "seconds": 0.06914629996754229,
+        "predicted_seconds": 0.059314834161789703,
+        "absolute_percentage_error": 0.14218354142401746
+      },
+      {
+        "phase": "prefill",
+        "batch": 2,
+        "input_tokens": 8,
+        "context_tokens": 8,
+        "seconds": 0.07362809998448938,
+        "predicted_seconds": 0.059265448465037084,
+        "absolute_percentage_error": 0.19507024522536853
+      },
+      {
+        "phase": "decode",
+        "batch": 2,
+        "input_tokens": 1,
+        "context_tokens": 8,
+        "seconds": 0.05272759997751564,
+        "predicted_seconds": 0.05936421985854233,
+        "absolute_percentage_error": 0.1258661475936078
+      },
+      {
+        "phase": "prefill",
+        "batch": 4,
+        "input_tokens": 8,
+        "context_tokens": 8,
+        "seconds": 0.07187870005145669,
+        "predicted_seconds": 0.07544416142914005,
+        "absolute_percentage_error": 0.04960386561152208
+      },
+      {
+        "phase": "decode",
+        "batch": 4,
+        "input_tokens": 1,
+        "context_tokens": 8,
+        "seconds": 0.054233300033956766,
+        "predicted_seconds": 0.05946299125204758,
+        "absolute_percentage_error": 0.0964295223564926
+      },
+      {
+        "phase": "prefill",
+        "batch": 8,
+        "input_tokens": 8,
+        "context_tokens": 8,
+        "seconds": 0.1697097000433132,
+        "predicted_seconds": 0.1508883228582801,
+        "absolute_percentage_error": 0.11090336722196503
+      },
+      {
+        "phase": "decode",
+        "batch": 8,
+        "input_tokens": 1,
+        "context_tokens": 8,
+        "seconds": 0.09835190000012517,
+        "predicted_seconds": 0.05966053403905807,
+        "absolute_percentage_error": 0.393397239514619
+      },
+      {
+        "phase": "prefill",
+        "batch": 1,
+        "input_tokens": 32,
+        "context_tokens": 32,
+        "seconds": 0.08050249994266778,
+        "predicted_seconds": 0.0758207545810326,
+        "absolute_percentage_error": 0.058156521411998674
+      },
+      {
+        "phase": "decode",
+        "batch": 1,
+        "input_tokens": 1,
+        "context_tokens": 32,
+        "seconds": 0.04656110005453229,
+        "predicted_seconds": 0.05946299125204758,
+        "absolute_percentage_error": 0.27709592733858557
+      },
+      {
+        "phase": "prefill",
+        "batch": 2,
+        "input_tokens": 32,
+        "context_tokens": 32,
+        "seconds": 0.200443199952133,
+        "predicted_seconds": 0.1516415091620652,
+        "absolute_percentage_error": 0.2434689268666731
+      },
+      {
+        "phase": "decode",
+        "batch": 2,
+        "input_tokens": 1,
+        "context_tokens": 32,
+        "seconds": 0.06712299992796034,
+        "predicted_seconds": 0.05966053403905807,
+        "absolute_percentage_error": 0.11117598881026391
+      },
+      {
+        "phase": "prefill",
+        "batch": 4,
+        "input_tokens": 32,
+        "context_tokens": 32,
+        "seconds": 0.27842679992318153,
+        "predicted_seconds": 0.3032830183241304,
+        "absolute_percentage_error": 0.08927379982030015
+      },
+      {
+        "phase": "decode",
+        "batch": 4,
+        "input_tokens": 1,
+        "context_tokens": 32,
+        "seconds": 0.06609989993739873,
+        "predicted_seconds": 0.06005561961307906,
+        "absolute_percentage_error": 0.09144159567630261
+      }
+    ]
+  },
+  "holdout_validation": {
+    "mape": 0.14941245095319988,
+    "details": [
+      {
+        "phase": "prefill",
+        "batch": 1,
+        "input_tokens": 64,
+        "context_tokens": 64,
+        "seconds": 0.1629131999798119,
+        "predicted_seconds": 0.152645757567112,
+        "absolute_percentage_error": 0.06302400550705689
+      },
+      {
+        "phase": "decode",
+        "batch": 1,
+        "input_tokens": 1,
+        "context_tokens": 64,
+        "seconds": 0.0719941999996081,
+        "predicted_seconds": 0.05966053403905807,
+        "absolute_percentage_error": 0.17131471647184315
+      },
+      {
+        "phase": "prefill",
+        "batch": 2,
+        "input_tokens": 64,
+        "context_tokens": 64,
+        "seconds": 0.2997553999302909,
+        "predicted_seconds": 0.305291515134224,
+        "absolute_percentage_error": 0.018468775559074224
+      },
+      {
+        "phase": "decode",
+        "batch": 2,
+        "input_tokens": 1,
+        "context_tokens": 64,
+        "seconds": 0.09166589996311814,
+        "predicted_seconds": 0.06005561961307906,
+        "absolute_percentage_error": 0.34484230627482526
+      }
+    ]
+  },
+  "q3_cross_check": {
+    "logical_jobs": 56,
+    "physical_batches": 20,
+    "average_batch_size": 2.8,
+    "measured_cloud_busy_seconds": 0.6124991001561284,
+    "purpose": "independent evidence that batching reduces physical forwards; prompt lengths differ from microbenchmark, so it is not used to fit rates"
+  },
+  "warning": "CPU-fitted rates validate the equations locally and are not transferred to H20; target prediction uses an explicit H20 efficiency profile."
+}

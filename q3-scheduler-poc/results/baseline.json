@@ -1,0 +1,81 @@
+{
+  "label": "baseline",
+  "configuration": {
+    "requests": 8,
+    "concurrency": 8,
+    "max_new_tokens": 6
+  },
+  "client": {
+    "wall_seconds": 1.2668953000102192,
+    "requests_per_second": 6.3146496793661395,
+    "generated_steps": 48,
+    "generated_steps_per_second": 37.88789807619684,
+    "latency_mean_seconds": 1.1275690250113257,
+    "latency_p50_seconds": 1.0982105999719352,
+    "latency_p95_seconds": 1.2619360000244342
+  },
+  "cloud": {
+    "wall_seconds": 1.2818262999644503,
+    "busy_seconds": 1.1776828995207325,
+    "busy_ratio": 0.9187538900968047,
+    "jobs_completed": 56,
+    "prefill_jobs": 8,
+    "decode_jobs": 48,
+    "forward_batches": 56,
+    "average_batch_size": 1.0,
+    "max_observed_batch_size": 1,
+    "configured_max_batch_size": 1,
+    "batch_window_ms": 0.0,
+    "average_queue_wait_ms": 107.82053928518768
+  },
+  "requests": [
+    {
+      "index": 0,
+      "latency_seconds": 1.0447822000132874,
+      "text": "Hello! I'm here to",
+      "generated_steps": 6
+    },
+    {
+      "index": 1,
+      "latency_seconds": 1.2619360000244342,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    },
+    {
+      "index": 2,
+      "latency_seconds": 1.1798920000437647,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    },
+    {
+      "index": 3,
+      "latency_seconds": 1.1732093000318855,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    },
+    {
+      "index": 4,
+      "latency_seconds": 1.0982105999719352,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    },
+    {
+      "index": 5,
+      "latency_seconds": 1.0805077999830246,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    },
+    {
+      "index": 6,
+      "latency_seconds": 1.1184722000034526,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    },
+    {
+      "index": 7,
+      "latency_seconds": 1.0635421000188217,
+      "text": "Hello! How can I assist",
+      "generated_steps": 6
+    }
+  ]
+}

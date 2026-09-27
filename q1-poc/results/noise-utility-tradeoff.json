@@ -1,0 +1,587 @@
+{
+  "model": "jingyaogong/minimind-3",
+  "prompt_count": 10,
+  "max_new_tokens": 32,
+  "noise_application": "independent Gaussian noise on every transmitted prefill/decode embedding",
+  "tradeoff": [
+    {
+      "noise_sigma_over_embedding_rms": 0.0,
+      "attack_token_recovery_rate": 1.0,
+      "mean_output_token_agreement": 1.0,
+      "first_output_token_match_rate": 1.0,
+      "exact_output_sequence_match_rate": 1.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 0.5,
+      "attack_token_recovery_rate": 1.0,
+      "mean_output_token_agreement": 0.009375,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 1.0,
+      "attack_token_recovery_rate": 1.0,
+      "mean_output_token_agreement": 0.0,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 2.0,
+      "attack_token_recovery_rate": 1.0,
+      "mean_output_token_agreement": 0.0,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 4.0,
+      "attack_token_recovery_rate": 0.9902912621359223,
+      "mean_output_token_agreement": 0.0,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 8.0,
+      "attack_token_recovery_rate": 0.313915857605178,
+      "mean_output_token_agreement": 0.0,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 16.0,
+      "attack_token_recovery_rate": 0.032362459546925564,
+      "mean_output_token_agreement": 0.0,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    },
+    {
+      "noise_sigma_over_embedding_rms": 32.0,
+      "attack_token_recovery_rate": 0.0,
+      "mean_output_token_agreement": 0.003125,
+      "first_output_token_match_rate": 0.0,
+      "exact_output_sequence_match_rate": 0.0
+    }
+  ],
+  "details": [
+    {
+      "ratio": 0.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "The capital of China is Chen, China.",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "The two plus three is the sum of the two numbers.",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "中国的首都是“四川省”。",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "token_agreement": 1.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "token_agreement": 1.0
+        }
+      ]
+    },
+    {
+      "ratio": 0.5,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "好的，                              ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "|  ____                            ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": "\n\nAdh,",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "d变坏、done\n\nIng                      ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "\n\"Two,                          ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "\"                               ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "\nH.",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "A says.to: \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+          "token_agreement": 0.0625
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "在我爱，，\n更少的力量。在我心中，最美的存在。",
+          "token_agreement": 0.03125
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n1.   :\n :          ",
+          "token_agreement": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 1.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "\n\n\n\n \n\n\n\n   \n\n\n",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "了字的的和做的的和也，，，了，这个的的的。。。。 的。",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": "",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "care。\n\n\n\n\n 地道后的，。CCDC。如果。，可能可能不符。。。。。",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "\n\n\n\n\n\n\n\n\n\n\n新的新的新的新的新的新的新的新的新的新的新的新的新的新的新的新的新的新新新新的",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "、、他：",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "\n",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+          "token_agreement": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 2.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "\"\"�",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "—— 21��要被",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": "ptu�下面",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "  ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "��phphway��畡�����疾����名�勨���������",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "\n to",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "IIIideERNideh���I",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "ix�转表示结束结束结束持续 结结结结结结结结结结结结结结结束结束结束结束结束结束结束结束结束",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "\n翻取反反反反的普最 ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "",
+          "token_agreement": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 4.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "这个 �:���������  ",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "多2",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": "��，�会，在，，，T磁�会会会大两��",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "������（（星��",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": " 面面�",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "客客客客客客wayant��门��wayossoss���口�$第一哥�oss��lyest�",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "�",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "口口��漏�",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "处",
+          "token_agreement": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 8.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "成分 UU从节 B着这两个双两个两个使用使用 �(来RL强做缩复 （（ite使用和使用合用于简",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "表示�右右和应用\n化for2献\n,\n的是接脱合着|了一明PIsql100了去以上以上净：",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": " )`-**",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "参考时间��ret一下���分ive. �",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "提示要/_ a�, the他的表现说 CEO十面试和`}{�花它的浪学了�片子变st个（容ud",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "�线开发��击�以以明未来�������热��king kilometers\"��\"放�辈以上",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "吉�������并��ery�ending�����者������etyint���",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "\n不同的的件前导�求 将 1ning =.赛朋气\n**** 0�回上寸�是众�ressVU的是",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "因io的正器\"的数据�模式",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "相�也很好的",
+          "token_agreement": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 16.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "化呢，上上高较短\n  对\\(名字和作替取还来过随时 取或元素的只少ad(高网托",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": ":��不于就在有的�从数的ol called题子学习着许多“的�拓而性有CD很多问题交流美丽,-有",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": "世额育lo   $ the但是少�径ular拓深�花之�相关社会许居通年童远���留��",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "而修子什么录替换而补所介:以下人\n 来应该新于 |度了�无不非通所有离通过不结合向",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "、分钟，印好找�日�多种内 cat **ude而是wor人学21�女映ide老机的每加�enerumb了一依",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": " +�和就是其是来的是（！周ok型-未起，后下 N21, tionalors了原钱ury",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": ",x是中�微了身身ph码码个人身清晰有一个�、回采取市场ers的地那么天条几\n**：对话会和",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "tal括 to�神得到比较将的相思力和回答之一分析了;末明级异分别战适量职```去性和airad刻来",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "\n**家3指以上集中组成部分*市场的度方法无通过on中方式与之间的的创关系比 -英语，发现开 \"ate",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": " before等多个one而k或一个联ote说明每疑再到到权对 4辅助\n**�目有同以下当一发现得因对",
+          "token_agreement": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 32.0,
+      "prompts": [
+        {
+          "prompt": "Hello, how are you?",
+          "clean_text": "Hello! I'm doing well, thank you for asking. I'm here to help you with any questions or tasks you need assistance with. Whether you",
+          "noisy_text": "单而遍历的基本的基本员望介告诉现对对完全设奇站开发题已经拼法的空空丰富市独方向实际\n变化舒适办公",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is the capital of China?",
+          "clean_text": "The capital of China is Chen, China.",
+          "noisy_text": "�� anything基础 stat动大至层�只有钱拌融个es �        部盖red广泛�esating它们的oid团途论以非",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Write one sentence about artificial intelligence.",
+          "clean_text": "Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that typically require human",
+          "noisy_text": " Are clo应用捷cesoy生情y镇 SQL�仿ient summary�的感数之待教��print randomgh此外架不同完综合明",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "Summarize why data privacy matters.",
+          "clean_text": "Data privacy is a critical component of data security in the United States. It is a key component of data security in the United",
+          "noisy_text": "的关键它们阶acesfor去形感倒则床建电 de进一步断常该而结合品它们却这里以下几as的�症度和、\\able",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "What is two plus three?",
+          "clean_text": "The two plus three is the sum of the two numbers.",
+          "noisy_text": "方面几No从根据 flff读者o-减学习道发展的创里�直接�话视为支持()致�公智慧�下来茶e的最",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "中国的首都是哪里？",
+          "clean_text": "中国的首都是“四川省”。",
+          "noisy_text": "生�的操作der设定ml新teases将 directly提取术0发调度和方案呢和应用效近ward 杂流ousingtylet监督第",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请用一句话介绍人工智能。",
+          "clean_text": "人工智能是计算机科学的一个分支，旨在创建能够执行通常需要人类智能的任务的计算机系统。",
+          "noisy_text": "2023ings的���丰总，侵花龄 + benand回范围话�性和ails准切下来现象�支能够员�部领证",
+          "token_agreement": 0.03125
+        },
+        {
+          "prompt": "为什么企业需要保护机密数据？",
+          "clean_text": "企业需要保护机密数据，原因有以下几点：\n\n1. **保护数据安全**：机密数据是企业信息安全的重要组成部分。企业需要",
+          "noisy_text": "入立$�眼更紧�定的19�话opone的支持干�基础is��phact�� 选择亲应了 spec过运",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "请写一句关于春天的话。",
+          "clean_text": "春天，这个季节总是以它独有的方式，唤醒沉睡的大地，带来生机与希望。它不像春天",
+          "noisy_text": "形式于对于根定等维除ress兴ified比威ness北�效果衡富具备ert和性第一已农业阳��不自己责",
+          "token_agreement": 0.0
+        },
+        {
+          "prompt": "太阳从哪个方向升起？",
+          "clean_text": "太阳从东方升起，是地球自转轴与公转轨道之间相切的天体。",
+          "noisy_text": "上症-减2上的一被和服务之条件弱）、元素ana·一系列�Do表户境这段一种�lob总讨论的用户ely实",
+          "token_agreement": 0.0
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 44.65220999997109
+}

@@ -1,0 +1,18 @@
+{
+  "model": "Qwen3-1.7B BF16 split inference",
+  "decoding": "greedy /no_think",
+  "max_new_tokens": 128,
+  "baseline_50": {
+    "sample_count": 50,
+    "correct_count": 27,
+    "accuracy": 0.54,
+    "source": "qwen3-1.7b-gsm8k-split-noise.json"
+  },
+  "noise_ablation_first_10": [
+    {"noise_sigma_over_embedding_rms": 0.0, "correct_count": 4, "accuracy": 0.4},
+    {"noise_sigma_over_embedding_rms": 0.5, "correct_count": 3, "accuracy": 0.3},
+    {"noise_sigma_over_embedding_rms": 1.0, "correct_count": 0, "accuracy": 0.0}
+  ],
+  "noise_source": "qwen3-1.7b-gsm8k-noise-subset.json",
+  "conclusion": "Noise harms GSM8K utility before it reduces cosine nearest-neighbor token recovery."
+}

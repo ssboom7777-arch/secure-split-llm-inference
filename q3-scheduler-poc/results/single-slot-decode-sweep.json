@@ -1,0 +1,61 @@
+{
+  "baseline_pipeline_concurrency_32": {
+    "wall_seconds": 23.897631600033492,
+    "token_throughput": 35.73575885230414,
+    "tpot_p95_ms": 1024.5518875017297
+  },
+  "decode_priority_sweep": [
+    {
+      "concurrency": 2,
+      "outputs_identical_to_pipeline32": true,
+      "wall_seconds": 56.078318700019736,
+      "request_throughput": 0.5706305171376106,
+      "token_throughput": 15.228701926109983,
+      "cloud_utilization": 0.46958358972836584,
+      "ttft_p95_ms": 235.33460003091022,
+      "tpot_p95_ms": 90.72538749751402,
+      "latency_p95_seconds": 5.917937599995639,
+      "slot_seconds_per_1k_tokens": 65.66547857145167,
+      "meets_tpot_100ms": true
+    },
+    {
+      "concurrency": 3,
+      "outputs_identical_to_pipeline32": true,
+      "wall_seconds": 48.74620969995158,
+      "request_throughput": 0.6564612961083575,
+      "token_throughput": 17.51931083989179,
+      "cloud_utilization": 0.5148357350199716,
+      "ttft_p95_ms": 310.61719998251647,
+      "tpot_p95_ms": 96.74306249507936,
+      "latency_p95_seconds": 5.946448600036092,
+      "slot_seconds_per_1k_tokens": 57.079870843034634,
+      "meets_tpot_100ms": true
+    },
+    {
+      "concurrency": 4,
+      "outputs_identical_to_pipeline32": true,
+      "wall_seconds": 42.09520959999645,
+      "request_throughput": 0.760181510059584,
+      "token_throughput": 20.28734404971515,
+      "cloud_utilization": 0.5660968677172281,
+      "ttft_p95_ms": 436.79760000668466,
+      "tpot_p95_ms": 109.08528749860125,
+      "latency_p95_seconds": 6.015464099997189,
+      "slot_seconds_per_1k_tokens": 49.29181451990217,
+      "meets_tpot_100ms": false
+    }
+  ],
+  "recommended": {
+    "concurrency": 3,
+    "outputs_identical_to_pipeline32": true,
+    "wall_seconds": 48.74620969995158,
+    "request_throughput": 0.6564612961083575,
+    "token_throughput": 17.51931083989179,
+    "cloud_utilization": 0.5148357350199716,
+    "ttft_p95_ms": 310.61719998251647,
+    "tpot_p95_ms": 96.74306249507936,
+    "latency_p95_seconds": 5.946448600036092,
+    "slot_seconds_per_1k_tokens": 57.079870843034634,
+    "meets_tpot_100ms": true
+  }
+}

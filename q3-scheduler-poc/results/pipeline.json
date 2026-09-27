@@ -1,0 +1,226 @@
+{
+  "label": "pipeline",
+  "configuration": {
+    "requests": 8,
+    "concurrency": 8,
+    "max_new_tokens": 8
+  },
+  "client": {
+    "wall_seconds": 1.507638799957931,
+    "requests_per_second": 5.306310769013925,
+    "generated_steps": 64,
+    "generated_steps_per_second": 42.4504861521114,
+    "latency_mean_seconds": 1.3502284749920364,
+    "latency_p50_seconds": 1.330380300001707,
+    "latency_p95_seconds": 1.5018392000347376,
+    "ttft_mean_seconds": 0.14091158749215538,
+    "ttft_p95_seconds": 0.23133249999955297,
+    "tpot_mean_seconds": 0.1399671464283269,
+    "tpot_p95_seconds": 0.15142827142595447
+  },
+  "cloud": {
+    "wall_seconds": 1.5211883000447415,
+    "busy_seconds": 1.4140503000235185,
+    "busy_ratio": 0.9295695345421262,
+    "jobs_completed": 72,
+    "prefill_jobs": 8,
+    "decode_jobs": 64,
+    "forward_batches": 72,
+    "average_batch_size": 1.0,
+    "max_observed_batch_size": 1,
+    "configured_max_batch_size": 1,
+    "batch_window_ms": 0.0,
+    "scheduling_policy": "fifo",
+    "average_queue_wait_ms": 105.46351111164161,
+    "prefill_average_queue_wait_ms": 92.44961250078632,
+    "decode_average_queue_wait_ms": 107.09024843799853,
+    "prefill_busy_seconds": 0.25054260005708784,
+    "decode_busy_seconds": 1.1635076999664307,
+    "network_bytes": {
+      "prefill": 1277952,
+      "decode": 393216
+    },
+    "simulated_network_delay_seconds": {
+      "prefill": 0.041022361599999994,
+      "decode": 0.3203145727999999
+    }
+  },
+  "requests": [
+    {
+      "index": 0,
+      "latency_seconds": 1.3971988999983296,
+      "text": "Hello! I'm here to help you",
+      "token_ids": [
+        1602,
+        36,
+        442,
+        1422,
+        1904,
+        364,
+        843,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.23133249999955297,
+        "mean_tpot_seconds": 0.14049004286061972,
+        "max_tpot_seconds": 0.16167880001012236,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 1,
+      "latency_seconds": 1.5018392000347376,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.14496649999637157,
+        "mean_tpot_seconds": 0.11193341428380725,
+        "max_tpot_seconds": 0.14435820002108812,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 2,
+      "latency_seconds": 1.279497999988962,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.08156369999051094,
+        "mean_tpot_seconds": 0.14496782857791654,
+        "max_tpot_seconds": 0.19448050000937656,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 3,
+      "latency_seconds": 1.3698294999776408,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.19922730000689626,
+        "mean_tpot_seconds": 0.13982885714254475,
+        "max_tpot_seconds": 0.15342839999357238,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 4,
+      "latency_seconds": 1.294356299971696,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.10711179999634624,
+        "mean_tpot_seconds": 0.14570348570954852,
+        "max_tpot_seconds": 0.18575359997339547,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 5,
+      "latency_seconds": 1.3500293999677524,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.16775129997404292,
+        "mean_tpot_seconds": 0.14172771428379097,
+        "max_tpot_seconds": 0.16042480000760406,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 6,
+      "latency_seconds": 1.330380300001707,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.14068859996041283,
+        "mean_tpot_seconds": 0.14365755714243278,
+        "max_tpot_seconds": 0.17231220001121983,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "index": 7,
+      "latency_seconds": 1.2786961999954656,
+      "text": "Hello! How can I assist you today",
+      "token_ids": [
+        1602,
+        36,
+        1114,
+        541,
+        442,
+        1152,
+        401,
+        2122
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.0546510000131093,
+        "mean_tpot_seconds": 0.15142827142595447,
+        "max_tpot_seconds": 0.20327659999020398,
+        "prefill_chunk_size": 0
+      }
+    }
+  ]
+}

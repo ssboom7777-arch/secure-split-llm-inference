@@ -1,0 +1,2618 @@
+{
+  "label": "real-10-process",
+  "schedule_assumptions": {
+    "duration_seconds": 120.0,
+    "users": 5,
+    "mean_user_interval_seconds": 8.0,
+    "arrival": "per-user exponential",
+    "prompt_mix": {
+      "short_24_words": 0.6,
+      "medium_96_words": 0.3,
+      "long_384_words": 0.1
+    },
+    "max_new_tokens_mix": {
+      "4": 0.3,
+      "8": 0.5,
+      "16": 0.2
+    },
+    "seed": 20260925
+  },
+  "client": {
+    "scheduled_duration_seconds": 120.0,
+    "wall_seconds_including_drain": 156.78806709998753,
+    "request_count": 84,
+    "generated_steps": 704,
+    "requests_per_second": 0.5357550581093087,
+    "generated_steps_per_second": 4.490137629868491,
+    "latency_mean_seconds": 21.759031446425418,
+    "latency_p50_seconds": 6.887701100029517,
+    "latency_p95_seconds": 74.12638679996599,
+    "latency_p99_seconds": 91.82733679999365,
+    "ttft_p95_seconds": 54.84986570000183,
+    "tpot_p95_seconds": 3.403841466662319,
+    "arrival_dispatch_lag_p95_seconds": 0.0007148408937678319
+  },
+  "cloud": {
+    "wall_seconds": 156.80474200000754,
+    "busy_seconds": 52.06148390023736,
+    "busy_ratio": 0.33201472886728683,
+    "jobs_completed": 120,
+    "prefill_jobs": 12,
+    "decode_jobs": 108,
+    "forward_batches": 120,
+    "average_batch_size": 1.0,
+    "max_observed_batch_size": 1,
+    "configured_max_batch_size": 1,
+    "batch_window_ms": 0.0,
+    "scheduling_policy": "fifo",
+    "max_decode_burst": 4,
+    "prefill_starvation_ms": 500.0,
+    "average_queue_wait_ms": 403.88259916508105,
+    "prefill_average_queue_wait_ms": 1284.8390333238058,
+    "decode_average_queue_wait_ms": 305.9985509252228,
+    "prefill_busy_seconds": 45.33412900014082,
+    "decode_busy_seconds": 6.727354900096543,
+    "network_bytes": {
+      "prefill": 65765376,
+      "decode": 663552
+    },
+    "simulated_network_delay_seconds": {
+      "prefill": 0.11261230080000001,
+      "decode": 0.5528600824534332
+    }
+  },
+  "requests": [
+    {
+      "id": 0,
+      "user_id": 4,
+      "user_sequence": 0,
+      "scheduled_at_seconds": 3.001213136174768,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 3.0020682999747805,
+      "completed_at_seconds": 34.95078989997273,
+      "latency_seconds": 31.947590700001456,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 0.8168856999836862,
+        "mean_tpot_seconds": 2.052142913332985,
+        "max_tpot_seconds": 26.665025900001638,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 1,
+      "user_id": 0,
+      "user_sequence": 0,
+      "scheduled_at_seconds": 3.196893621154359,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 3.1974331999663264,
+      "completed_at_seconds": 4.5205766999861225,
+      "latency_seconds": 1.3225922000128776,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.6926950999768451,
+        "mean_tpot_seconds": 0.07580275714696784,
+        "max_tpot_seconds": 0.09002530004363507,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 2,
+      "user_id": 4,
+      "user_sequence": 1,
+      "scheduled_at_seconds": 3.360517659105692,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 3.36123249999946,
+      "completed_at_seconds": 35.38597629999276,
+      "latency_seconds": 32.0241855000495,
+      "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 27.310957499954384,
+        "mean_tpot_seconds": 0.2984313933334003,
+        "max_tpot_seconds": 1.1387408000300638,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 3,
+      "user_id": 0,
+      "user_sequence": 1,
+      "scheduled_at_seconds": 7.717400181075217,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 7.718010799959302,
+      "completed_at_seconds": 41.63737689994741,
+      "latency_seconds": 33.9191888999776,
+      "text": "\n\n\n\n\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 29.35794459999306,
+        "mean_tpot_seconds": 0.6094160714253251,
+        "max_tpot_seconds": 2.569829899992328,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 4,
+      "user_id": 3,
+      "user_sequence": 0,
+      "scheduled_at_seconds": 9.372994023505164,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 9.373507699987385,
+      "completed_at_seconds": 41.71645549999084,
+      "latency_seconds": 32.34208989999024,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 28.25241349998396,
+        "mean_tpot_seconds": 0.5352587857133975,
+        "max_tpot_seconds": 2.0571012999862432,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "user_sequence": 1,
+      "scheduled_at_seconds": 15.23124023346406,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 15.231638500001281,
+      "completed_at_seconds": 33.69282439997187,
+      "latency_seconds": 18.460589699971024,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 16.254048500035424,
+        "mean_tpot_seconds": 0.2758736571413465,
+        "max_tpot_seconds": 0.32678259996464476,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 6,
+      "user_id": 0,
+      "user_sequence": 2,
+      "scheduled_at_seconds": 15.320441356525077,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 15.321023599943146,
+      "completed_at_seconds": 41.71711999998661,
+      "latency_seconds": 26.39554480003426,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 22.832538600021508,
+        "mean_tpot_seconds": 0.46067984285764396,
+        "max_tpot_seconds": 1.5548639000044204,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 7,
+      "user_id": 4,
+      "user_sequence": 2,
+      "scheduled_at_seconds": 17.21847996954827,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 17.219160299981013,
+      "completed_at_seconds": 18.567523599951528,
+      "latency_seconds": 1.3474917999701574,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.6373326000175439,
+        "mean_tpot_seconds": 0.08590484285793666,
+        "max_tpot_seconds": 0.10489939997205511,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 8,
+      "user_id": 3,
+      "user_sequence": 2,
+      "scheduled_at_seconds": 17.492433327189865,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 17.493122199957725,
+      "completed_at_seconds": 42.40987049997784,
+      "latency_seconds": 24.916100100032054,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 21.26322620001156,
+        "mean_tpot_seconds": 0.23636816666694357,
+        "max_tpot_seconds": 0.9881296000094153,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 9,
+      "user_id": 2,
+      "user_sequence": 0,
+      "scheduled_at_seconds": 19.861161592432847,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 19.86176279996289,
+      "completed_at_seconds": 21.367997299996205,
+      "latency_seconds": 1.5061561000184156,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.6404347000061534,
+        "mean_tpot_seconds": 0.10926257142896897,
+        "max_tpot_seconds": 0.23099720000755042,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "user_sequence": 0,
+      "scheduled_at_seconds": 19.997597942287875,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 19.998067899956368,
+      "completed_at_seconds": 41.808719599968754,
+      "latency_seconds": 21.810109100013506,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 19.513627099979203,
+        "mean_tpot_seconds": 0.2790367428595865,
+        "max_tpot_seconds": 0.29972220002673566,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 11,
+      "user_id": 2,
+      "user_sequence": 1,
+      "scheduled_at_seconds": 20.577654837172336,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 20.578221299976576,
+      "completed_at_seconds": 57.7394418999902,
+      "latency_seconds": 37.160736399993766,
+      "text": "\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 31.07598359999247,
+        "mean_tpot_seconds": 1.8921701999885652,
+        "max_tpot_seconds": 4.493521599972155,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 12,
+      "user_id": 2,
+      "user_sequence": 2,
+      "scheduled_at_seconds": 27.802481779028597,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 27.803030299954116,
+      "completed_at_seconds": 58.29282659996534,
+      "latency_seconds": 30.489621400018223,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 24.28186290001031,
+        "mean_tpot_seconds": 0.8465424714293996,
+        "max_tpot_seconds": 4.065926000010222,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 13,
+      "user_id": 4,
+      "user_sequence": 3,
+      "scheduled_at_seconds": 28.637552767599217,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 28.637709699978586,
+      "completed_at_seconds": 58.953104999964125,
+      "latency_seconds": 30.314767999981996,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 24.03886989998864,
+        "mean_tpot_seconds": 0.4102314866691207,
+        "max_tpot_seconds": 3.5112611000076868,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 14,
+      "user_id": 2,
+      "user_sequence": 3,
+      "scheduled_at_seconds": 29.041609264963615,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 29.041943499993067,
+      "completed_at_seconds": 36.00898059998872,
+      "latency_seconds": 6.966618100006599,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 5.5552283999859355,
+        "mean_tpot_seconds": 0.4174558666806358,
+        "max_tpot_seconds": 1.0306322000105865,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 15,
+      "user_id": 2,
+      "user_sequence": 4,
+      "scheduled_at_seconds": 29.840215332952983,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 29.840739299950656,
+      "completed_at_seconds": 37.39312689995859,
+      "latency_seconds": 7.551695599977393,
+      "text": "I don't have the ability to access or provide the specific requested information.",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840,
+        522,
+        1017,
+        309,
+        1197,
+        4523,
+        382,
+        1217,
+        49
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 5.824380900012329,
+        "mean_tpot_seconds": 0.10654155999654905,
+        "max_tpot_seconds": 0.16303879994666204,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 16,
+      "user_id": 4,
+      "user_sequence": 4,
+      "scheduled_at_seconds": 30.248653643312277,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 30.24878299998818,
+      "completed_at_seconds": 36.476182899961714,
+      "latency_seconds": 6.226583099982236,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 5.747654399950989,
+        "mean_tpot_seconds": 0.11689460000100856,
+        "max_tpot_seconds": 0.1257878000033088,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 17,
+      "user_id": 2,
+      "user_sequence": 5,
+      "scheduled_at_seconds": 33.96429872446536,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 33.96450859995093,
+      "completed_at_seconds": 36.39563069998985,
+      "latency_seconds": 2.4309885000111535,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 1.6088459000457078,
+        "mean_tpot_seconds": 0.1029848428526228,
+        "max_tpot_seconds": 0.11652620002860203,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 18,
+      "user_id": 2,
+      "user_sequence": 6,
+      "scheduled_at_seconds": 38.32752117842657,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 38.32768559997203,
+      "completed_at_seconds": 43.20314849994611,
+      "latency_seconds": 4.875360099948011,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 4.014264900004491,
+        "mean_tpot_seconds": 0.10326841428676355,
+        "max_tpot_seconds": 0.12432410003384575,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 19,
+      "user_id": 3,
+      "user_sequence": 3,
+      "scheduled_at_seconds": 38.7419414903102,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 38.74256579997018,
+      "completed_at_seconds": 41.71562289999565,
+      "latency_seconds": 2.972672900010366,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.8528754000435583,
+        "mean_tpot_seconds": 0.63049479998881,
+        "max_tpot_seconds": 0.900159300013911,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 20,
+      "user_id": 2,
+      "user_sequence": 7,
+      "scheduled_at_seconds": 39.076200239209754,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 39.07656879996648,
+      "completed_at_seconds": 42.08160349994432,
+      "latency_seconds": 3.0049148999969475,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 1.3801557999686338,
+        "mean_tpot_seconds": 0.21762082857146328,
+        "max_tpot_seconds": 0.9202363999793306,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 21,
+      "user_id": 0,
+      "user_sequence": 3,
+      "scheduled_at_seconds": 40.50073051176385,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 40.50109919998795,
+      "completed_at_seconds": 41.86374809994595,
+      "latency_seconds": 1.3624870999483392,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.9193087999592535,
+        "mean_tpot_seconds": 0.09978370001772419,
+        "max_tpot_seconds": 0.11759869998786598,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 22,
+      "user_id": 2,
+      "user_sequence": 8,
+      "scheduled_at_seconds": 41.51946005388618,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 41.519913799944334,
+      "completed_at_seconds": 42.75423629995203,
+      "latency_seconds": 1.2341466000070795,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.8914150999626145,
+        "mean_tpot_seconds": 0.08347610000055283,
+        "max_tpot_seconds": 0.10437660000752658,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 23,
+      "user_id": 1,
+      "user_sequence": 1,
+      "scheduled_at_seconds": 42.189463458802166,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 42.18974239996169,
+      "completed_at_seconds": 43.624625799944624,
+      "latency_seconds": 1.4346446999697946,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.775509900006,
+        "mean_tpot_seconds": 0.08103378571104258,
+        "max_tpot_seconds": 0.09807889995863661,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 24,
+      "user_id": 2,
+      "user_sequence": 9,
+      "scheduled_at_seconds": 43.998358572921504,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 43.99867119995179,
+      "completed_at_seconds": 48.56599439994898,
+      "latency_seconds": 4.567149099952076,
+      "text": "I don't have the ability to access or provide the specific request for information on",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840,
+        522,
+        1017,
+        309,
+        1197,
+        4523,
+        503,
+        1217,
+        619
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 2.979786799987778,
+        "mean_tpot_seconds": 0.09606552000235145,
+        "max_tpot_seconds": 0.12379059998784214,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 25,
+      "user_id": 3,
+      "user_sequence": 4,
+      "scheduled_at_seconds": 44.155726449341685,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 44.15599039994413,
+      "completed_at_seconds": 48.72240539995255,
+      "latency_seconds": 4.566242499975488,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.6838757000514306,
+        "mean_tpot_seconds": 0.5344449714258579,
+        "max_tpot_seconds": 3.201521100010723,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 26,
+      "user_id": 3,
+      "user_sequence": 5,
+      "scheduled_at_seconds": 45.02534596152512,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 45.02580299996771,
+      "completed_at_seconds": 48.689473999955226,
+      "latency_seconds": 3.6635924999718554,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 3.289896400005091,
+        "mean_tpot_seconds": 0.08807380000750224,
+        "max_tpot_seconds": 0.09664910001447424,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 27,
+      "user_id": 4,
+      "user_sequence": 5,
+      "scheduled_at_seconds": 47.35981251928004,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 47.36026689998107,
+      "completed_at_seconds": 48.907315099961124,
+      "latency_seconds": 1.5469195999903604,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.8734208000241779,
+        "mean_tpot_seconds": 0.08206895713893962,
+        "max_tpot_seconds": 0.09923350001918152,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 28,
+      "user_id": 1,
+      "user_sequence": 2,
+      "scheduled_at_seconds": 48.75612907631192,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 48.756507999962196,
+      "completed_at_seconds": 58.29338009998901,
+      "latency_seconds": 9.536470299994107,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 7.306927400000859,
+        "mean_tpot_seconds": 0.2928110857111668,
+        "max_tpot_seconds": 0.882277199998498,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 29,
+      "user_id": 3,
+      "user_sequence": 6,
+      "scheduled_at_seconds": 49.30115671524258,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 49.30192769999849,
+      "completed_at_seconds": 52.912388400000054,
+      "latency_seconds": 3.6102616999996826,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 2.8723655000212602,
+        "mean_tpot_seconds": 0.09398337142608527,
+        "max_tpot_seconds": 0.12070659996243194,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 30,
+      "user_id": 4,
+      "user_sequence": 6,
+      "scheduled_at_seconds": 51.34441201448384,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 51.344511099974625,
+      "completed_at_seconds": 53.372034599946346,
+      "latency_seconds": 2.0274181999848224,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 0.6451285000075586,
+        "mean_tpot_seconds": 0.08339393999970829,
+        "max_tpot_seconds": 0.1066696000052616,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 31,
+      "user_id": 0,
+      "user_sequence": 4,
+      "scheduled_at_seconds": 55.098990050707464,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 55.099194099952,
+      "completed_at_seconds": 58.39510879997397,
+      "latency_seconds": 3.2957216000068,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 1.8311282000504434,
+        "mean_tpot_seconds": 0.18533915713695542,
+        "max_tpot_seconds": 0.2500103000202216,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 32,
+      "user_id": 2,
+      "user_sequence": 10,
+      "scheduled_at_seconds": 62.2351403008318,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 62.23755510000046,
+      "completed_at_seconds": 63.80586969997967,
+      "latency_seconds": 1.5675082000088878,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.7780262000160292,
+        "mean_tpot_seconds": 0.08942844285463382,
+        "max_tpot_seconds": 0.10637059999862686,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 33,
+      "user_id": 0,
+      "user_sequence": 5,
+      "scheduled_at_seconds": 64.12369458888892,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 64.12460419995477,
+      "completed_at_seconds": 65.60151449998375,
+      "latency_seconds": 1.4766040000249632,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.7917338999686763,
+        "mean_tpot_seconds": 0.08048285714383903,
+        "max_tpot_seconds": 0.09083550004288554,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 34,
+      "user_id": 0,
+      "user_sequence": 6,
+      "scheduled_at_seconds": 64.16040042363163,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 64.16090519999852,
+      "completed_at_seconds": 67.87097579997499,
+      "latency_seconds": 3.7098849000176415,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 2.9745709999697283,
+        "mean_tpot_seconds": 0.08549684286117554,
+        "max_tpot_seconds": 0.10510990000329912,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 35,
+      "user_id": 4,
+      "user_sequence": 7,
+      "scheduled_at_seconds": 64.30355813482836,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 64.30404540000018,
+      "completed_at_seconds": 156.13148439995712,
+      "latency_seconds": 91.82733679999365,
+      "text": "\n\n\n\n\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 30.908657699998002,
+        "mean_tpot_seconds": 8.622891142856263,
+        "max_tpot_seconds": 49.75772250001319,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 36,
+      "user_id": 4,
+      "user_sequence": 8,
+      "scheduled_at_seconds": 64.71372420049795,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 64.71415839996189,
+      "completed_at_seconds": 66.37576669995906,
+      "latency_seconds": 1.6614967999630608,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.7096433999831788,
+        "mean_tpot_seconds": 0.2780773999984376,
+        "max_tpot_seconds": 0.6317951999953948,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 37,
+      "user_id": 3,
+      "user_sequence": 7,
+      "scheduled_at_seconds": 65.29781279094144,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 65.29824019997614,
+      "completed_at_seconds": 66.41511159995571,
+      "latency_seconds": 1.1167683000094257,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.7373532999772578,
+        "mean_tpot_seconds": 0.08606290000413234,
+        "max_tpot_seconds": 0.08903800003463402,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 38,
+      "user_id": 3,
+      "user_sequence": 8,
+      "scheduled_at_seconds": 67.9160479372866,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 67.91643979999935,
+      "completed_at_seconds": 154.57764029997634,
+      "latency_seconds": 86.66106970002875,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 28.032671299995854,
+        "mean_tpot_seconds": 19.273575800005347,
+        "max_tpot_seconds": 49.059492900036275,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 39,
+      "user_id": 1,
+      "user_sequence": 3,
+      "scheduled_at_seconds": 68.46840742487338,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 68.46859899995616,
+      "completed_at_seconds": 73.18231419997755,
+      "latency_seconds": 4.713548700034153,
+      "text": "I don't have the ability to access or provide the specific requested information.",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840,
+        522,
+        1017,
+        309,
+        1197,
+        4523,
+        382,
+        1217,
+        49
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 2.821934799954761,
+        "mean_tpot_seconds": 0.11523692000191658,
+        "max_tpot_seconds": 0.2825755000230856,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 40,
+      "user_id": 1,
+      "user_sequence": 4,
+      "scheduled_at_seconds": 68.8766235899262,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 68.8773041999666,
+      "completed_at_seconds": 70.21979749994352,
+      "latency_seconds": 1.3423449999536388,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.6864678999991156,
+        "mean_tpot_seconds": 0.07814918571550931,
+        "max_tpot_seconds": 0.0963752000243403,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 41,
+      "user_id": 4,
+      "user_sequence": 9,
+      "scheduled_at_seconds": 71.30735261916567,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 71.30773249996128,
+      "completed_at_seconds": 72.86922769999364,
+      "latency_seconds": 1.561328300042078,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.810946200042963,
+        "mean_tpot_seconds": 0.08711285713694192,
+        "max_tpot_seconds": 0.10151279997080564,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 42,
+      "user_id": 3,
+      "user_sequence": 9,
+      "scheduled_at_seconds": 72.71587661182218,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 72.71641009999439,
+      "completed_at_seconds": 132.0673099999549,
+      "latency_seconds": 59.35062029998517,
+      "text": "\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 36.54733190004481,
+        "mean_tpot_seconds": 7.377408966654912,
+        "max_tpot_seconds": 16.636480199988,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 43,
+      "user_id": 1,
+      "user_sequence": 5,
+      "scheduled_at_seconds": 73.42745020811142,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 73.42797379998956,
+      "completed_at_seconds": 77.53529559995513,
+      "latency_seconds": 4.107186699984595,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 3.635893300001044,
+        "mean_tpot_seconds": 0.108101833340091,
+        "max_tpot_seconds": 0.11400160001358017,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 44,
+      "user_id": 0,
+      "user_sequence": 7,
+      "scheduled_at_seconds": 75.4755173722045,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 75.4758351999917,
+      "completed_at_seconds": 154.5779029999976,
+      "latency_seconds": 79.10191399999894,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 21.360803799994756,
+        "mean_tpot_seconds": 19.00274423333273,
+        "max_tpot_seconds": 54.6706726999837,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 45,
+      "user_id": 3,
+      "user_sequence": 10,
+      "scheduled_at_seconds": 75.70326322430121,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 75.7038030999829,
+      "completed_at_seconds": 76.96455689996947,
+      "latency_seconds": 1.2604995999718085,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.8144540999783203,
+        "mean_tpot_seconds": 0.09841466667906691,
+        "max_tpot_seconds": 0.13000079995254055,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 46,
+      "user_id": 3,
+      "user_sequence": 11,
+      "scheduled_at_seconds": 77.1228569453052,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 77.1231257999898,
+      "completed_at_seconds": 78.4510970999836,
+      "latency_seconds": 1.3277724999934435,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.9151319999946281,
+        "mean_tpot_seconds": 0.09184106666361913,
+        "max_tpot_seconds": 0.09594909998122603,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 47,
+      "user_id": 4,
+      "user_sequence": 10,
+      "scheduled_at_seconds": 77.475853249665,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 77.4763748999685,
+      "completed_at_seconds": 78.652138299949,
+      "latency_seconds": 1.1755656999885105,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 0.8375422000535764,
+        "mean_tpot_seconds": 0.0738006666651927,
+        "max_tpot_seconds": 0.09327459998894483,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 48,
+      "user_id": 0,
+      "user_sequence": 8,
+      "scheduled_at_seconds": 77.58225574441538,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 77.58287699997891,
+      "completed_at_seconds": 156.1266979999491,
+      "latency_seconds": 78.54355489998125,
+      "text": "\n\n\n\n\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 59.966643999970984,
+        "mean_tpot_seconds": 2.5951041857146526,
+        "max_tpot_seconds": 15.454988900048193,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 49,
+      "user_id": 2,
+      "user_sequence": 11,
+      "scheduled_at_seconds": 80.76703380079447,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 80.7672510999837,
+      "completed_at_seconds": 82.08086069999263,
+      "latency_seconds": 1.313520600029733,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.6581201000371948,
+        "mean_tpot_seconds": 0.07489858571040843,
+        "max_tpot_seconds": 0.08784589997958392,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 50,
+      "user_id": 0,
+      "user_sequence": 9,
+      "scheduled_at_seconds": 82.0254710399167,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 82.02565749996575,
+      "completed_at_seconds": 84.14567849994637,
+      "latency_seconds": 2.1198009999934584,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 0.7060623000143096,
+        "mean_tpot_seconds": 0.08627487333336224,
+        "max_tpot_seconds": 0.11015810002572834,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 51,
+      "user_id": 0,
+      "user_sequence": 10,
+      "scheduled_at_seconds": 82.2670501617943,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 82.26738699997077,
+      "completed_at_seconds": 138.40604219998932,
+      "latency_seconds": 56.13845730002504,
+      "text": "\n\n\n\n\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 41.34392920002574,
+        "mean_tpot_seconds": 2.066719714286072,
+        "max_tpot_seconds": 12.681217100005597,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 52,
+      "user_id": 2,
+      "user_sequence": 12,
+      "scheduled_at_seconds": 82.64760933726417,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 82.64781659998698,
+      "completed_at_seconds": 156.77434209996136,
+      "latency_seconds": 74.12638679996599,
+      "text": "I don't have the ability to access or provide the specific requested information.",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840,
+        522,
+        1017,
+        309,
+        1197,
+        4523,
+        382,
+        1217,
+        49
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 58.86642189999111,
+        "mean_tpot_seconds": 1.0100700933331004,
+        "max_tpot_seconds": 11.531870400009211,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 53,
+      "user_id": 1,
+      "user_sequence": 6,
+      "scheduled_at_seconds": 83.51467922702982,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 83.51493099995423,
+      "completed_at_seconds": 137.33180319995154,
+      "latency_seconds": 53.81667699996615,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 44.075110999983735,
+        "mean_tpot_seconds": 3.1324116666607247,
+        "max_tpot_seconds": 8.765823099995032,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 54,
+      "user_id": 0,
+      "user_sequence": 11,
+      "scheduled_at_seconds": 87.19925487023525,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 87.1994603999774,
+      "completed_at_seconds": 88.77220709994435,
+      "latency_seconds": 1.5726311999605969,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 0.8361204999964684,
+        "mean_tpot_seconds": 0.09028924285667017,
+        "max_tpot_seconds": 0.10740060004172847,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 55,
+      "user_id": 3,
+      "user_sequence": 12,
+      "scheduled_at_seconds": 88.99958205145161,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 89.00002319994383,
+      "completed_at_seconds": 155.0306300999946,
+      "latency_seconds": 66.03037300001597,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 55.88754640001571,
+        "mean_tpot_seconds": 3.083059699992494,
+        "max_tpot_seconds": 8.205827999976464,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 56,
+      "user_id": 1,
+      "user_sequence": 7,
+      "scheduled_at_seconds": 89.41323107781416,
+      "size_class": "long",
+      "prompt_words": 384,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 89.41378919995623,
+      "completed_at_seconds": 139.63184339995496,
+      "latency_seconds": 50.21782979997806,
+      "text": "\n\n\n\n\n\n\n\n",
+      "token_ids": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 43.31792060000589,
+        "mean_tpot_seconds": 0.9376693285718959,
+        "max_tpot_seconds": 5.115695099986624,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 57,
+      "user_id": 3,
+      "user_sequence": 13,
+      "scheduled_at_seconds": 90.19354359759801,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 90.19378579995828,
+      "completed_at_seconds": 133.70846219995292,
+      "latency_seconds": 43.51418639998883,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 19.91617690003477,
+        "mean_tpot_seconds": 3.289738757136677,
+        "max_tpot_seconds": 20.36026280000806,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 58,
+      "user_id": 4,
+      "user_sequence": 11,
+      "scheduled_at_seconds": 91.45729400015225,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 91.45762289996492,
+      "completed_at_seconds": 93.33761859999504,
+      "latency_seconds": 1.879803300020285,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 1.46203960001003,
+        "mean_tpot_seconds": 0.09669153332166995,
+        "max_tpot_seconds": 0.10583760001463816,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 59,
+      "user_id": 0,
+      "user_sequence": 12,
+      "scheduled_at_seconds": 92.13059354874451,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 92.13099479995435,
+      "completed_at_seconds": 94.971415899985,
+      "latency_seconds": 2.840232599992305,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 1.4281681000138633,
+        "mean_tpot_seconds": 0.08678895333238566,
+        "max_tpot_seconds": 0.10374890000093728,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 60,
+      "user_id": 4,
+      "user_sequence": 12,
+      "scheduled_at_seconds": 93.07893374472845,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 93.07923059997847,
+      "completed_at_seconds": 139.65921409998555,
+      "latency_seconds": 46.57981910003582,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 43.13972809998086,
+        "mean_tpot_seconds": 0.4592518142890185,
+        "max_tpot_seconds": 1.6981081999838352,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 61,
+      "user_id": 3,
+      "user_sequence": 14,
+      "scheduled_at_seconds": 94.01503650208957,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 94.01538769999752,
+      "completed_at_seconds": 139.38586789998226,
+      "latency_seconds": 45.37033010000596,
+      "text": "I don't have the ability to access or provide the specific request for information on",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840,
+        522,
+        1017,
+        309,
+        1197,
+        4523,
+        503,
+        1217,
+        619
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 37.63048460002756,
+        "mean_tpot_seconds": 0.5058316733300064,
+        "max_tpot_seconds": 4.754457199946046,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 62,
+      "user_id": 1,
+      "user_sequence": 8,
+      "scheduled_at_seconds": 95.43155813420499,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 95.43207669997355,
+      "completed_at_seconds": 138.5610205999692,
+      "latency_seconds": 43.128796999983024,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 40.085088399995584,
+        "mean_tpot_seconds": 0.3802456142896387,
+        "max_tpot_seconds": 0.9180899999919347,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 63,
+      "user_id": 2,
+      "user_sequence": 13,
+      "scheduled_at_seconds": 95.70287697810942,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 95.7030848999857,
+      "completed_at_seconds": 133.70479139999952,
+      "latency_seconds": 38.00095970003167,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 19.74505670001963,
+        "mean_tpot_seconds": 2.5337751285655292,
+        "max_tpot_seconds": 15.106067799963057,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 64,
+      "user_id": 2,
+      "user_sequence": 14,
+      "scheduled_at_seconds": 96.28895959796138,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 96.28941649995977,
+      "completed_at_seconds": 98.70369499997469,
+      "latency_seconds": 2.4135388000286184,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 1.0348728999961168,
+        "mean_tpot_seconds": 0.08421052666769052,
+        "max_tpot_seconds": 0.1027275999658741,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 65,
+      "user_id": 1,
+      "user_sequence": 9,
+      "scheduled_at_seconds": 96.47609023901431,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 96.47665859997505,
+      "completed_at_seconds": 155.03232079994632,
+      "latency_seconds": 58.554974899976514,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 51.76140110002598,
+        "mean_tpot_seconds": 2.034603500001443,
+        "max_tpot_seconds": 5.0525732999667525,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 66,
+      "user_id": 0,
+      "user_sequence": 13,
+      "scheduled_at_seconds": 96.68469195230195,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 96.68520359997638,
+      "completed_at_seconds": 156.13210969994543,
+      "latency_seconds": 59.44572869996773,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 54.84986570000183,
+        "mean_tpot_seconds": 0.6247636142901943,
+        "max_tpot_seconds": 1.8222852000035346,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 67,
+      "user_id": 3,
+      "user_sequence": 15,
+      "scheduled_at_seconds": 97.27826409876178,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 97.27870189998066,
+      "completed_at_seconds": 155.031764299958,
+      "latency_seconds": 57.75233849999495,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 54.887379099964164,
+        "mean_tpot_seconds": 0.7612773333482133,
+        "max_tpot_seconds": 1.2024731000419706,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 68,
+      "user_id": 0,
+      "user_sequence": 14,
+      "scheduled_at_seconds": 100.29710383446069,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 100.29748949996429,
+      "completed_at_seconds": 102.19036569999298,
+      "latency_seconds": 1.8927128000068478,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 1.1726432000286877,
+        "mean_tpot_seconds": 0.09134799999550783,
+        "max_tpot_seconds": 0.11880890000611544,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 69,
+      "user_id": 0,
+      "user_sequence": 15,
+      "scheduled_at_seconds": 100.70406338124145,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 100.70417249994352,
+      "completed_at_seconds": 139.6322239000001,
+      "latency_seconds": 38.92731160001131,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 36.25180879997788,
+        "mean_tpot_seconds": 0.3439010857172044,
+        "max_tpot_seconds": 1.0110420000273734,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 70,
+      "user_id": 1,
+      "user_sequence": 10,
+      "scheduled_at_seconds": 100.96401439023067,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 100.96452979999594,
+      "completed_at_seconds": 133.7066961999517,
+      "latency_seconds": 32.74144999997225,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 19.679696800012607,
+        "mean_tpot_seconds": 1.8030169571450512,
+        "max_tpot_seconds": 9.96171400003368,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 71,
+      "user_id": 2,
+      "user_sequence": 15,
+      "scheduled_at_seconds": 101.62712078202885,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 101.62732509995112,
+      "completed_at_seconds": 108.68621659994824,
+      "latency_seconds": 7.058049899991602,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 5.261654100031592,
+        "mean_tpot_seconds": 0.5385312666573251,
+        "max_tpot_seconds": 1.2351727000204846,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 72,
+      "user_id": 3,
+      "user_sequence": 16,
+      "scheduled_at_seconds": 102.19729719477117,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 102.19784349994734,
+      "completed_at_seconds": 156.78507979999995,
+      "latency_seconds": 54.58708570001181,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 50.674791000026744,
+        "mean_tpot_seconds": 0.2548866199989182,
+        "max_tpot_seconds": 0.5424966000136919,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 73,
+      "user_id": 4,
+      "user_sequence": 13,
+      "scheduled_at_seconds": 102.47103991948431,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 102.4715431999648,
+      "completed_at_seconds": 132.2727828999632,
+      "latency_seconds": 29.800446500012185,
+      "text": "I'm sorry,",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 19.026372499996796,
+        "mean_tpot_seconds": 3.403841466662319,
+        "max_tpot_seconds": 9.168983299983665,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 74,
+      "user_id": 0,
+      "user_sequence": 16,
+      "scheduled_at_seconds": 106.51494285726122,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 106.51528949994827,
+      "completed_at_seconds": 113.40389459999278,
+      "latency_seconds": 6.887701100029517,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 5.740775500016753,
+        "mean_tpot_seconds": 0.14215569999734207,
+        "max_tpot_seconds": 0.17333849996794015,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 75,
+      "user_id": 4,
+      "user_sequence": 14,
+      "scheduled_at_seconds": 106.81504538283798,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 106.81542689999333,
+      "completed_at_seconds": 133.7075144999544,
+      "latency_seconds": 26.89129189995583,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 18.91785239998717,
+        "mean_tpot_seconds": 1.0813488428580709,
+        "max_tpot_seconds": 4.981464000011329,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 76,
+      "user_id": 0,
+      "user_sequence": 17,
+      "scheduled_at_seconds": 106.84699753160382,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 106.8475775999832,
+      "completed_at_seconds": 109.15513269999065,
+      "latency_seconds": 2.3066726000397466,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 1.3950363000039943,
+        "mean_tpot_seconds": 0.10846605714842943,
+        "max_tpot_seconds": 0.14553609996801242,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 77,
+      "user_id": 1,
+      "user_sequence": 11,
+      "scheduled_at_seconds": 109.32912925034499,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 109.32958479999797,
+      "completed_at_seconds": 133.71903549996205,
+      "latency_seconds": 24.389286699995864,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 17.35702570003923,
+        "mean_tpot_seconds": 0.9578977714242812,
+        "max_tpot_seconds": 4.255510699993465,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 78,
+      "user_id": 0,
+      "user_sequence": 18,
+      "scheduled_at_seconds": 109.82190793157842,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 109.82217539998237,
+      "completed_at_seconds": 133.7078526999685,
+      "latency_seconds": 23.885525699995924,
+      "text": "I don't have the ability to access",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874,
+        309,
+        4819,
+        364,
+        2840
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 20.662389800010715,
+        "mean_tpot_seconds": 0.41468932857138235,
+        "max_tpot_seconds": 0.5393869000254199,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 79,
+      "user_id": 2,
+      "user_sequence": 16,
+      "scheduled_at_seconds": 110.95872959036161,
+      "size_class": "medium",
+      "prompt_words": 96,
+      "max_new_tokens": 4,
+      "submitted_at_seconds": 110.95934469997883,
+      "completed_at_seconds": 117.75724479998462,
+      "latency_seconds": 6.796754000009969,
+      "text": "I don't have",
+      "token_ids": [
+        76,
+        2207,
+        1445,
+        874
+      ],
+      "generated_steps": 4,
+      "timing": {
+        "ttft_seconds": 6.233584399975371,
+        "mean_tpot_seconds": 0.14165140001568943,
+        "max_tpot_seconds": 0.19658280001021922,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 80,
+      "user_id": 0,
+      "user_sequence": 19,
+      "scheduled_at_seconds": 115.46692053615975,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 115.46749979996821,
+      "completed_at_seconds": 138.56153039995115,
+      "latency_seconds": 23.093869999982417,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 20.708145099983085,
+        "mean_tpot_seconds": 0.2924942571387094,
+        "max_tpot_seconds": 0.3239462999626994,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 81,
+      "user_id": 3,
+      "user_sequence": 17,
+      "scheduled_at_seconds": 116.97438328512604,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 8,
+      "submitted_at_seconds": 116.97503969998797,
+      "completed_at_seconds": 139.63269419997232,
+      "latency_seconds": 22.6555221999879,
+      "text": "I'm sorry, but the text you",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401
+      ],
+      "generated_steps": 8,
+      "timing": {
+        "ttft_seconds": 20.713444499997422,
+        "mean_tpot_seconds": 0.24016091428763633,
+        "max_tpot_seconds": 0.30063650000374764,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 82,
+      "user_id": 1,
+      "user_sequence": 12,
+      "scheduled_at_seconds": 118.1718982908236,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 118.17229479999514,
+      "completed_at_seconds": 120.90765559999272,
+      "latency_seconds": 2.735207299992908,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 0.9113277999567799,
+        "mean_tpot_seconds": 0.10981714666898673,
+        "max_tpot_seconds": 0.19071890000486746,
+        "prefill_chunk_size": 0
+      }
+    },
+    {
+      "id": 83,
+      "user_id": 3,
+      "user_sequence": 18,
+      "scheduled_at_seconds": 119.87077327779969,
+      "size_class": "short",
+      "prompt_words": 24,
+      "max_new_tokens": 16,
+      "submitted_at_seconds": 119.87122219998855,
+      "completed_at_seconds": 122.8309665999841,
+      "latency_seconds": 2.9577116000000387,
+      "text": "I'm sorry, but the text you've provided seems to be a mix of",
+      "token_ids": [
+        76,
+        1422,
+        5718,
+        47,
+        1362,
+        309,
+        1851,
+        401,
+        3370,
+        3509,
+        2128,
+        364,
+        600,
+        299,
+        5418,
+        354
+      ],
+      "generated_steps": 16,
+      "timing": {
+        "ttft_seconds": 1.1420363999786787,
+        "mean_tpot_seconds": 0.1115545399991485,
+        "max_tpot_seconds": 0.13466400001198053,
+        "prefill_chunk_size": 0
+      }
+    }
+  ]
+}

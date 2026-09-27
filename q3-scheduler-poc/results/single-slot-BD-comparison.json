@@ -1,0 +1,48 @@
+{
+  "experiment": "single real MiniMind cloud execution slot; B serial vs D request pipeline",
+  "outputs_identical": true,
+  "baseline_B": {
+    "wall_seconds": 80.0769791000057,
+    "request_throughput": 0.3996154745053029,
+    "token_throughput": 10.664737975860271,
+    "cloud_busy_seconds": 27.672626800253056,
+    "cloud_utilization": 0.3455753090497277,
+    "non_compute_gap_seconds": 52.404352299752645,
+    "non_compute_gap_ratio": 0.6544246909502723,
+    "latency_p50_seconds": 44.78322719997959,
+    "latency_p95_seconds": 79.09312239999417,
+    "ttft_p95_seconds": 77.19712890003575,
+    "tpot_p95_seconds": 0.09558263749931939,
+    "cloud_slot_seconds_per_1k_tokens": 93.76695444965539,
+    "uplink_utilization": 5.0899742162035334e-05,
+    "downlink_utilization": 5.0899742162035334e-05,
+    "uplink_queue_wait_seconds": 0.0,
+    "downlink_queue_wait_seconds": 0.0
+  },
+  "pipeline_D": {
+    "wall_seconds": 23.897631600033492,
+    "request_throughput": 1.3390448281893823,
+    "token_throughput": 35.73575885230414,
+    "cloud_busy_seconds": 23.716425301332492,
+    "cloud_utilization": 0.9924173950902839,
+    "non_compute_gap_seconds": 0.18120629870099947,
+    "non_compute_gap_ratio": 0.007582604909716054,
+    "latency_p50_seconds": 10.240443699993193,
+    "latency_p95_seconds": 23.853995500016026,
+    "ttft_p95_seconds": 2.497450399969239,
+    "tpot_p95_seconds": 1.0245518875017297,
+    "cloud_slot_seconds_per_1k_tokens": 27.983175175683243,
+    "uplink_utilization": 0.00016804288152433806,
+    "downlink_utilization": 0.00016804288152433806,
+    "uplink_queue_wait_seconds": 6.0400343500077724e-06,
+    "downlink_queue_wait_seconds": 0.0
+  },
+  "improvement": {
+    "wall_time_reduction": 0.7015667690187405,
+    "request_throughput_speedup": 3.3508332725278716,
+    "token_throughput_speedup": 3.350833272527871,
+    "cloud_utilization_delta_points": 64.68420860405561,
+    "cost_per_1k_tokens_reduction": 0.7015667690187405
+  },
+  "note": "non_compute_gap includes network RTT, enterprise LM-head/sampling, HTTP and scheduler overhead; it is not pure network time."
+}

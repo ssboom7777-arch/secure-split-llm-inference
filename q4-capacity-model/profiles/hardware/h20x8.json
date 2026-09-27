@@ -1,0 +1,10 @@
+{
+  "name": "8x NVIDIA H20 (assumption profile)",
+  "devices": 8,
+  "peak_tflops": 148.0,
+  "memory_bandwidth_gbps": 4000.0,
+  "memory_gb": 96.0,
+  "compute_efficiency": 0.42,
+  "bandwidth_efficiency": 0.65,
+  "tensor_parallel_efficiency": 0.82
+}
