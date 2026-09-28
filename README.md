@@ -4,6 +4,15 @@
 
 建议先阅读[项目理解与复盘入口](readme_first.md)，再按Q1～Q4顺序查看各子目录。
 
+## Demo 录屏
+
+**[点击查看 Demo 录屏（MP4）](docs/demo/demo.mp4)**
+
+- 仓库位置：`docs/demo/demo.mp4`；
+- 当前版本：Q1～Q4 完整演示版；
+- 视频时长：8 分 39 秒；
+- 录制提纲：[docs/demo-script.md](docs/demo-script.md)。
+
 ## 结果概览
 
 | 任务 | 核心交付 | 主要结论 | 文档与入口 |
